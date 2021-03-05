@@ -4,6 +4,27 @@
   
     
     <entry>
+      <title>Format setting for react/jsx-tag-spacing with Web Storm</title>
+      <link href="/2021/03/06/Format-setting-for-react-jsx-tag-spacing-with-Web-Storm/"/>
+      <url>/2021/03/06/Format-setting-for-react-jsx-tag-spacing-with-Web-Storm/</url>
+      
+        <content type="html"><![CDATA[<p>Settings | Editor | Code Style | HTML | Other =&gt; In empty tag</p><a id="more"></a><p><img src="https://user-images.githubusercontent.com/13145406/110183823-9ec5c780-7e74-11eb-92e3-432ff5008404.png" alt="Eslint error"></p><p><img width="662" alt="Settings" src="https://user-images.githubusercontent.com/13145406/110183939-d3d21a00-7e74-11eb-9bda-b39684739b60.png"></p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> React </tag>
+            
+            <tag> WebStorm </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Change the destination of Mac screenshots</title>
       <link href="/2021/02/20/Change-the-destination-of-Mac-screenshots/"/>
       <url>/2021/02/20/Change-the-destination-of-Mac-screenshots/</url>
@@ -206,9 +227,9 @@
       
         <tags>
             
-            <tag> Node </tag>
-            
             <tag> VS Code </tag>
+            
+            <tag> Node </tag>
             
         </tags>
       
@@ -663,11 +684,11 @@
       
         <tags>
             
-            <tag> VS Code </tag>
-            
             <tag> Hack </tag>
             
             <tag> Regex </tag>
+            
+            <tag> VS Code </tag>
             
         </tags>
       
