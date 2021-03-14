@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>Dev note</title>
+      <link href="/2021/03/14/Dev-note/"/>
+      <url>/2021/03/14/Dev-note/</url>
+      
+        <content type="html"><![CDATA[<h3 id="Fake-API"><a href="#Fake-API" class="headerlink" title="Fake API"></a>Fake API</h3><ul><li><p><strong>JSON Placeholder</strong><br>  <a href="https://jsonplaceholder.typicode.com/" target="_blank" rel="noopener">https://jsonplaceholder.typicode.com/</a></p></li><li><p><strong>REQ|RES</strong><br>  <a href="https://reqres.in/" target="_blank" rel="noopener">https://reqres.in/</a></p></li></ul><a id="more"></a><ul><li><strong>NUMBERSAPI</strong><br>  <a href="http://numbersapi.com/#42" target="_blank" rel="noopener">http://numbersapi.com/#42</a></li></ul>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> API </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Format setting for react/jsx-tag-spacing with Web Storm</title>
       <link href="/2021/03/06/Format-setting-for-react-jsx-tag-spacing-with-Web-Storm/"/>
       <url>/2021/03/06/Format-setting-for-react-jsx-tag-spacing-with-Web-Storm/</url>
@@ -227,9 +246,9 @@
       
         <tags>
             
-            <tag> VS Code </tag>
-            
             <tag> Node </tag>
+            
+            <tag> VS Code </tag>
             
         </tags>
       
@@ -684,11 +703,11 @@
       
         <tags>
             
+            <tag> VS Code </tag>
+            
             <tag> Hack </tag>
             
             <tag> Regex </tag>
-            
-            <tag> VS Code </tag>
             
         </tags>
       
