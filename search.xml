@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>react-testing-library: Change the size of debug&#39;s output</title>
+      <link href="/2021/07/13/react-testing-library-Change-the-size-of-debug-s-output/"/>
+      <url>/2021/07/13/react-testing-library-Change-the-size-of-debug-s-output/</url>
+      
+        <content type="html"><![CDATA[<p><code>screen.debug()</code> returns some portion of the element while default <code>DEBUG_PRINT_LIMIT</code> is 7000.<br><a id="more"></a></p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> maxLengthToPrint = <span class="number">100000</span></span><br><span class="line">screen.debug(<span class="literal">undefined</span>, maxLengthToPrint);</span><br></pre></td></tr></table></figure><p><img src="https://user-images.githubusercontent.com/13145406/125440739-8f0e9e73-2ad8-449e-841b-98a2533f0a7a.png" alt="debug"></p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> React </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Dev note</title>
       <link href="/2021/03/14/Dev-note/"/>
       <url>/2021/03/14/Dev-note/</url>
