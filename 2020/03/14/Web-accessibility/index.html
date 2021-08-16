@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-137779643-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+  
+  <title>Web accessibility | Hoehoe blog</title><meta name="robots" content="noindex">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="REL:https://www.slideshare.net/nozomisawada969/waiaria-72900338 ウェイ・アリア　ｰ&amp;gt;　要素と属性を追加する仕様 アクセシブルではないマークアップに対して、WAI-ARIAの何を足せばアクセシブルになる？">
+<meta name="keywords" content="Accessibility">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Web accessibility">
+<meta property="og:url" content="http://yoursite.com/2020/03/14/Web-accessibility/index.html">
+<meta property="og:site_name" content="Hoehoe blog">
+<meta property="og:description" content="REL:https://www.slideshare.net/nozomisawada969/waiaria-72900338 ウェイ・アリア　ｰ&amp;gt;　要素と属性を追加する仕様 アクセシブルではないマークアップに対して、WAI-ARIAの何を足せばアクセシブルになる？">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2021-08-16T09:55:42.869Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Web accessibility">
+<meta name="twitter:description" content="REL:https://www.slideshare.net/nozomisawada969/waiaria-72900338 ウェイ・アリア　ｰ&amp;gt;　要素と属性を追加する仕様 アクセシブルではないマークアップに対して、WAI-ARIAの何を足せばアクセシブルになる？">
+  
+  
+    <link rel="icon" href="/images/favicon.ico">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+<body>
+  <div id="container">
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/about" class="mobile-nav-link">About</a>
+  
+    <a href="https://github.com/hoehoetester" class="mobile-nav-link">Github</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    <div id="wrap">
+      <header id="header">
+  <a id="main-nav-toggle" class="nav-icon"></a>
+
+  <a href="/" id="logo">
+    <h1>Hoehoe blog</h1>
+    <div>
+      Javascript is poison... <span class="main-nav__heading-icon">😈</span>
+    </div>
+  </a>
+
+  <nav>
+    <ul>
+      
+      <li>
+        <a class="main-nav-link" href="/"
+          >Home</a
+        >
+      </li>
+      
+      <li>
+        <a class="main-nav-link" href="/about"
+          >About</a
+        >
+      </li>
+      
+      <li>
+        <a class="main-nav-link" href="https://github.com/hoehoetester"
+          >Github</a
+        >
+      </li>
+      
+      <li>
+        <a class="main-nav-link" href="/archives"
+          >Archives</a
+        >
+      </li>
+      
+    </ul>
+  </nav>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-Web-accessibility" class="article article-type-post" itemscope
+  itemprop="blogPost">
+  <div class="article-meta">
+  </div>
+  <div class="article-inner">
+    
+    
+    <header class="article-header">
+      
+  
+    <h1 class="article-title" itemprop="name">
+      Web accessibility
+    </h1>
+  
+
+      <span class="article-date">
+  <time datetime="2020-03-14T08:21:54.000Z" itemprop="datePublished">🕒 2020-03-14</time>
+</span>
+      
+      
+    </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+      <h3 id="REL"><a href="#REL" class="headerlink" title="REL:"></a>REL:</h3><p><a href="https://www.slideshare.net/nozomisawada969/waiaria-72900338" target="_blank" rel="noopener">https://www.slideshare.net/nozomisawada969/waiaria-72900338</a></p>
+<p>ウェイ・アリア　ｰ&gt;　要素と属性を追加する仕様</p>
+<h1 id="アクセシブルではないマークアップに対して、WAI-ARIAの何を足せばアクセシブルになる？"><a href="#アクセシブルではないマークアップに対して、WAI-ARIAの何を足せばアクセシブルになる？" class="headerlink" title="アクセシブルではないマークアップに対して、WAI-ARIAの何を足せばアクセシブルになる？"></a>アクセシブルではないマークアップに対して、WAI-ARIAの何を足せばアクセシブルになる？</h1><a id="more"></a>
+<h2 id="🚩-なぜ仕様を追加する必要があるか？"><a href="#🚩-なぜ仕様を追加する必要があるか？" class="headerlink" title="🚩 なぜ仕様を追加する必要があるか？"></a>🚩 なぜ仕様を追加する必要があるか？</h2><p>–&gt; HTMLはもともと文章をマークアップするための言語</p>
+<ul>
+<li>js/cssなどで複雑になったWebアプリの構造</li>
+<li>「何が・いつ・どう」変化したかという情報<br>–&gt; HTMLの要素や属性だけでは表現しきれない</li>
+</ul>
+<p>—&gt;　WAI-ARIAの定義を付加（role属性、aria-xxx属性、tabindex属性）　構造・変化をUA（User Agent）に伝えられるようになる</p>
+<h3 id="🚩-WAI-ARIAのイメージ"><a href="#🚩-WAI-ARIAのイメージ" class="headerlink" title="🚩 WAI-ARIAのイメージ"></a>🚩 WAI-ARIAのイメージ</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span>動画プレーヤー<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line">--&gt; role属性の追加</span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">role</span>=<span class="string">"dialog"</span>&gt;</span>動画プレーヤー<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line">--&gt; UAが解釈するイメージ</span><br><span class="line"><span class="tag">&lt;<span class="name">dialog</span>&gt;</span>動画プレーヤー<span class="tag">&lt;/<span class="name">dialog</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="🚩-WAI-ARIAを使うと何がかわるのか"><a href="#🚩-WAI-ARIAを使うと何がかわるのか" class="headerlink" title="🚩 WAI-ARIAを使うと何がかわるのか"></a>🚩 WAI-ARIAを使うと何がかわるのか</h3><ul>
+<li>UAが正しく解釈し、正しく振る舞うようになる</li>
+<li>スクリーンリーダー利用者に正しく伝わる</li>
+<li>CSS/JSを使った開発がラクになる</li>
+</ul>
+<h3 id="🚩-role属性"><a href="#🚩-role属性" class="headerlink" title="🚩 role属性"></a>🚩 role属性</h3><ul>
+<li>要素の意味や役割を定義するための属性</li>
+<li>既存の要素の役割も上書きして変更できる</li>
+</ul>
+<p>—&gt;　HTMLに元々ある要素は役割を変えずそのまま使うが原則！</p>
+<h3 id="🚩-WAI-ARIAで定義されている仕様"><a href="#🚩-WAI-ARIAで定義されている仕様" class="headerlink" title="🚩 WAI-ARIAで定義されている仕様"></a>🚩 WAI-ARIAで定義されている仕様</h3><ul>
+<li>role属性</li>
+<li>aria-xxx属性</li>
+<li>tabindex属性</li>
+</ul>
+<h3 id="🚩-aria-xxx属性"><a href="#🚩-aria-xxx属性" class="headerlink" title="🚩 aria-xxx属性"></a>🚩 aria-xxx属性</h3><ul>
+<li>オブジェクトの状態(state)や性質/特性(property)を示す属性</li>
+<li>ロールとの組み合わせで、ユーザーに「何が・いつ・どう」変化したかを通知できる</li>
+</ul>
+<h3 id="🚩-グローバル・ステート＆プロパティ属性"><a href="#🚩-グローバル・ステート＆プロパティ属性" class="headerlink" title="🚩 グローバル・ステート＆プロパティ属性"></a>🚩 グローバル・ステート＆プロパティ属性</h3><ul>
+<li>すべてのHTML要素に使用可</li>
+<li>すべてのロールに使用可<br>(<code>aria-describedby</code>, <code>aria-hidden</code>, <code>aria-label</code>, <code>aria-labelledby</code> など)</li>
+</ul>
+<h3 id="🚩-関係属性"><a href="#🚩-関係属性" class="headerlink" title="🚩 関係属性"></a>🚩 関係属性</h3><ul>
+<li>要素と要素の関係を明確に示すために使用される属性</li>
+<li>文章構造からだけでは解釈しにくい関係性を定期<br>(例：マークアップ順ではない読み上げ順)<br>(<code>aria-details</code>, <code>aria-labelledby</code>, <code>aria-rowcount</code> など)<br>注意点</li>
+<li>aria-labelledby属性は複数指定可能</li>
+<li>ラベルを画面に表示できる場合: <code>aria-labelledby</code><br>ラベルを画面に表示できない場合: <code>aria-label</code></li>
+<li>短いラベルの場合: <code>aria-labelledby</code><br>文章で説明する場合: <code>aria-describedby</code></li>
+</ul>
+<h3 id="🚩-ウィジェット属性"><a href="#🚩-ウィジェット属性" class="headerlink" title="🚩 ウィジェット属性"></a>🚩 ウィジェット属性</h3><ul>
+<li>aria-hidden属性の使用は、見えているコンテンツを支援技術（スクリーンリーダーなど）から隠すことで、支援技術者とそうでない利用者の体験価値が同等になる場合に限る（訳:気軽に隠すなよ）</li>
+</ul>
+<h3 id="🚩-tabindex属性"><a href="#🚩-tabindex属性" class="headerlink" title="🚩 tabindex属性"></a>🚩 tabindex属性</h3><ul>
+<li>インタラクティブなオブジェクトはすべてフォーカス可能にしなければいけない</li>
+<li>要素にフォーカスを与える属性としてtabindex属性を使用(tabindex自体はHTMLの仕様)</li>
+<li><p>HTML5ではすべての要素にtabindexの指定が可能</p>
+</li>
+<li><p>tabindex=’正の整数’  ：tabキーの移動順</p>
+</li>
+<li>tabindex=’0’        :フォーカス可能(順序はマークアップ順)</li>
+<li>tabindex=’-1’       ：フォーカス不可</li>
+</ul>
+<h2 id="🚩-まとめ"><a href="#🚩-まとめ" class="headerlink" title="🚩 まとめ"></a>🚩 まとめ</h2><p>大切なのはセマンティクス<br>-&gt; 要素の意味<br>-&gt; 適切な要素が使えない時にWAI-ARIA</p>
+<hr>
+<h2 id="🚩-Example-of-Read-more-link"><a href="#🚩-Example-of-Read-more-link" class="headerlink" title="🚩 Example of Read more link"></a>🚩 Example of Read more link</h2><h3 id="🚩-Example-without-aria-label"><a href="#🚩-Example-without-aria-label" class="headerlink" title="🚩 Example without aria-label"></a>🚩 Example without <code>aria-label</code></h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span></span><br><span class="line">  This is a test paragraph.</span><br><span class="line">  <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"example.html"</span>&gt;</span>Read moe <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"screen-reader-text"</span>&gt;</span>this test paragraph<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="css"><span class="selector-class">.screen-reader-text</span> &#123;</span></span><br><span class="line"><span class="undefined">    position: absolute;</span></span><br><span class="line"><span class="undefined">    overflow: hidden;</span></span><br><span class="line"><span class="undefined">    width: 1px;</span></span><br><span class="line"><span class="undefined">    height: 1px;</span></span><br><span class="line"><span class="undefined">    padding: 0;</span></span><br><span class="line"><span class="undefined">    border: 0;</span></span><br><span class="line"><span class="undefined">    margin: -1px;</span></span><br><span class="line"><span class="undefined">    clip: rect(0,0,0,0);</span></span><br><span class="line"><span class="undefined">&#125;</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="🚩-Example-with-aria-label"><a href="#🚩-Example-with-aria-label" class="headerlink" title="🚩 Example with aria-label"></a>🚩 Example with <code>aria-label</code></h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span></span><br><span class="line">  This is a test paragraph.</span><br><span class="line">  <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"example.html"</span> <span class="attr">aria-label</span>=<span class="string">"read more this test paragraph"</span>&gt;</span>Read moe<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<hr>
+<blockquote>
+<p>アクセシビリティとは、特にWebサイト上における、情報やサービスへのアクセスのしやすさのことである。 アクセシビリティは、高齢者や障害者なども含めたあらゆる人が、どのような環境（うるさい場所や、暗い場所、逆に明るい場所など）においても柔軟にWebサイトを利用できるように構築することを考慮する場合に使われる。</p>
+</blockquote>
+<ol>
+<li>ページの内容がわかるページタイトルを記述する</li>
+<li>見出しやリストなどの文章構造をマークアップする</li>
+<li>リンクテキストはリンク先がわかる文言にする</li>
+<li>情報を伝えている画像に代替テキストを提供する</li>
+<li>情報を伝える色の使い方に注意する</li>
+<li>ユーザーがコンテンツを拡大表示できるようにする</li>
+<li>キーボードだけでも操作できるようにする</li>
+<li>フォームコントロールのラベルや説明をマークアップする</li>
+<li>エラーメッセージではエラー箇所と修正方法を明示する</li>
+<li>動画にキャプション（字幕）を提供する</li>
+</ol>
+<p><code>&lt;figure&gt;</code>タグは、図表であることを示す際に使用します。 ここで言う図表とは、文書の本文（メインフロー）から参照されるようなイラスト・図・写真・ソースコードなどのことです。</p>
+<p>図表は本文から参照される内容ですが、本文に影響を与えることなく、ページの端・専用ページ・別表にして切り離すことができます。</p>
+<p>必要ならば、図表にキャプションや注釈を付けても良いでしょう。 図表にキャプションを付ける場合には、<code>&lt;figcaption&gt;</code>タグを使用します。</p>
+<h3 id="🚩-Indicate-the-current-item"><a href="#🚩-Indicate-the-current-item" class="headerlink" title="🚩 Indicate the current item"></a>🚩 Indicate the current item</h3><p>Indicate the current itemreplace anchor with <code>span</code> or use the <code>aria-current=&quot;page&quot;</code> attribute to indicate the current page in the menu</p>
+<h3 id="🚩-Example"><a href="#🚩-Example" class="headerlink" title="🚩 Example"></a>🚩 Example</h3><h4 id="Ref"><a href="#Ref" class="headerlink" title="Ref:"></a>Ref:</h4><p><a href="https://www.youtube.com/watch?v=z8xUCzToff8" target="_blank" rel="noopener">https://www.youtube.com/watch?v=z8xUCzToff8</a></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">"First name, edit text"</span><br><span class="line"><span class="tag">&lt;<span class="name">label</span>&gt;</span></span><br><span class="line">  First name:</span><br><span class="line">  <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">"Main Menu, button"</span><br><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">id</span>=<span class="string">"hamburger"</span></span></span><br><span class="line"><span class="tag">  <span class="attr">aria-label</span>=<span class="string">"Main Menu"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">"Men's Outerwear, Shop Now, button"</span><br><span class="line"><span class="tag">&lt;<span class="name">h2</span> <span class="attr">id</span>=<span class="string">"lbl"</span>&gt;</span>Men's Outerwear<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">button</span></span></span><br><span class="line"><span class="tag">  <span class="attr">id</span>=<span class="string">"btn"</span></span></span><br><span class="line"><span class="tag">  <span class="attr">aria-labelledby</span>=<span class="string">"lbl btn"</span>&gt;</span></span><br><span class="line">  Shop Now</span><br><span class="line"><span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br></pre></td></tr></table></figure><!-- flag of hidden posts -->
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Accessibility/">Accessibility</a></li></ul>
+
+    </footer>
+  </div>
+  
+  
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    <div id="site_search" class="widget-wrap">
+  <h3 class="widget-title">Search</h3>
+  <input type="text" id="local-search-input" name="q" results="0" placeholder="Search in my blog..."
+    class="form-control" />
+  <div id="local-search-result"></div>
+</div>
+  
+    
+<div class="widget-wrap">
+  <h3 class="widget-title">Recent Posts</h3>
+  <div class="widget">
+    <ul class="recent-posts">
+      
+      <li class="recent-post-item">
+        <a href="/2021/08/16/OOPS-I-want-to-undo-the-last-push-on-Github/"
+          >OOPS! I want to undo the last push on Github</a
+        >
+      </li>
+      
+      <li class="recent-post-item">
+        <a href="/2021/08/15/When-you-want-to-push-from-a-local-branch-to-a-remote-branch-that-is-the-same-name/"
+          >When you want to push from a local branch to a remote branch that is the same name</a
+        >
+      </li>
+      
+      <li class="recent-post-item">
+        <a href="/2021/08/03/Typescript-note-Literal-type-error/"
+          >Typescript note - Literal type error</a
+        >
+      </li>
+      
+      <li class="recent-post-item">
+        <a href="/2021/08/03/Typescript-note-Generics/"
+          >Typescript note - Generics</a
+        >
+      </li>
+      
+      <li class="recent-post-item">
+        <a href="/2021/08/02/How-to-execute-multiple-functions-in-ternary-operator/"
+          >How to execute multiple functions in ternary operator</a
+        >
+      </li>
+      
+      <li class="recent-post-item">
+        <a href="/2021/08/01/Create-dotnet-console-app-with-terminal/"
+          >Create dotnet console app with terminal</a
+        >
+      </li>
+      
+      <li class="recent-post-item">
+        <a href="/2021/07/13/react-testing-library-Change-the-size-of-debug-s-output/"
+          >react-testing-library: Change the size of debug&#39;s output</a
+        >
+      </li>
+      
+      <li class="recent-post-item">
+        <a href="/2021/03/14/Dev-note/"
+          >Dev note</a
+        >
+      </li>
+      
+      <li class="recent-post-item">
+        <a href="/2021/03/06/Format-setting-for-react-jsx-tag-spacing-with-Web-Storm/"
+          >Format setting for react/jsx-tag-spacing with Web Storm</a
+        >
+      </li>
+      
+      <li class="recent-post-item">
+        <a href="/2021/02/20/Change-the-destination-of-Mac-screenshots/"
+          >Change the destination of Mac screenshots</a
+        >
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Net/" style="font-size: 10px;">.Net</a> <a href="/tags/API/" style="font-size: 10px;">API</a> <a href="/tags/Accessibility/" style="font-size: 13.33px;">Accessibility</a> <a href="/tags/Angular/" style="font-size: 15px;">Angular</a> <a href="/tags/CSS/" style="font-size: 11.67px;">CSS</a> <a href="/tags/Cypress/" style="font-size: 10px;">Cypress</a> <a href="/tags/ES2015/" style="font-size: 13.33px;">ES2015</a> <a href="/tags/Express/" style="font-size: 10px;">Express</a> <a href="/tags/Git/" style="font-size: 16.67px;">Git</a> <a href="/tags/Hack/" style="font-size: 10px;">Hack</a> <a href="/tags/Heroku/" style="font-size: 10px;">Heroku</a> <a href="/tags/Hexo/" style="font-size: 11.67px;">Hexo</a> <a href="/tags/Hoe/" style="font-size: 11.67px;">Hoe</a> <a href="/tags/Javascript/" style="font-size: 20px;">Javascript</a> <a href="/tags/Jest/" style="font-size: 11.67px;">Jest</a> <a href="/tags/Mac/" style="font-size: 13.33px;">Mac</a> <a href="/tags/Mapbox/" style="font-size: 10px;">Mapbox</a> <a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/Mongo/" style="font-size: 10px;">Mongo</a> <a href="/tags/Node/" style="font-size: 11.67px;">Node</a> <a href="/tags/Objective/" style="font-size: 10px;">Objective</a> <a href="/tags/Parcel/" style="font-size: 11.67px;">Parcel</a> <a href="/tags/React/" style="font-size: 18.33px;">React</a> <a href="/tags/Regex/" style="font-size: 11.67px;">Regex</a> <a href="/tags/Splunk/" style="font-size: 10px;">Splunk</a> <a href="/tags/Stackoverflow/" style="font-size: 10px;">Stackoverflow</a> <a href="/tags/Terminal/" style="font-size: 10px;">Terminal</a> <a href="/tags/Typescript/" style="font-size: 13.33px;">Typescript</a> <a href="/tags/VS-Code/" style="font-size: 11.67px;">VS Code</a> <a href="/tags/WebStorm/" style="font-size: 10px;">WebStorm</a> <a href="/tags/Webpack/" style="font-size: 11.67px;">Webpack</a> <a href="/tags/dotenv/" style="font-size: 10px;">dotenv</a> <a href="/tags/npm/" style="font-size: 10px;">npm</a> <a href="/tags/redux-dev-tools/" style="font-size: 10px;">redux-dev-tools</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/08/">August 2021</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/07/">July 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/03/">March 2021</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/02/">February 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/12/">December 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/09/">September 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/07/">July 2020</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/">June 2020</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/05/">May 2020</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/04/">April 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">March 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/02/">February 2020</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/01/">January 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">November 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">September 2019</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">August 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">July 2019</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">April 2019</a><span class="archive-list-count">11</span></li></ul>
+    </div>
+  </div>
+
+
+  
+</aside>
+        
+      </div>
+    </div>
+  </div>
+  <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2021 hoehoetester<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+  <script>
+  console.log(`
+ _                   _                    _      _
+| |                 | |                  | |    | |
+| |__    ___    ___ | |__    ___    ___  | |__  | |  ___    __ _
+| '_ \\  / _ \\  / _ \\| '_ \\  / _ \\  / _ \\ | '_ \\ | | / _ \\  / _  |
+| | | || (_) ||  __/| | | || (_) ||  __/ | |_) || || (_) || (_| |
+|_| |_| \\___/  \\___||_| |_| \\___/  \\___| |_.__/ |_| \\___/  \\__, |
+                                                            __/ |
+                                                           |___/
+`)
+</script>
+
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+<script src="/js/search.js"></script>
+<script type="text/javascript">
+  var search_path = "search.xml";
+  if (search_path.length == 0) {
+    search_path = "search.xml";
+  }
+  var path = "/" + search_path;
+  searchFunc(path, "local-search-input", "local-search-result");
+</script>
+
+</body>
+</html>

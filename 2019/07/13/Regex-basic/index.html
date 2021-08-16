@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-137779643-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+  
+  <title>Regex basic | Hoehoe blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Basics . –&amp;gt; Any character (改行を除く任意の一文字)  To search meta characters, escape by a backslash.(メタ文字自体を検索したい場合は”\“でエスケープする)">
+<meta name="keywords" content="Regex">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Regex basic">
+<meta property="og:url" content="http://yoursite.com/2019/07/13/Regex-basic/index.html">
+<meta property="og:site_name" content="Hoehoe blog">
+<meta property="og:description" content="Basics . –&amp;gt; Any character (改行を除く任意の一文字)  To search meta characters, escape by a backslash.(メタ文字自体を検索したい場合は”\“でエスケープする)">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2021-08-16T09:55:42.865Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Regex basic">
+<meta name="twitter:description" content="Basics . –&amp;gt; Any character (改行を除く任意の一文字)  To search meta characters, escape by a backslash.(メタ文字自体を検索したい場合は”\“でエスケープする)">
+  
+  
+    <link rel="icon" href="/images/favicon.ico">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+<body>
+  <div id="container">
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/about" class="mobile-nav-link">About</a>
+  
+    <a href="https://github.com/hoehoetester" class="mobile-nav-link">Github</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    <div id="wrap">
+      <header id="header">
+  <a id="main-nav-toggle" class="nav-icon"></a>
+
+  <a href="/" id="logo">
+    <h1>Hoehoe blog</h1>
+    <div>
+      Javascript is poison... <span class="main-nav__heading-icon">😈</span>
+    </div>
+  </a>
+
+  <nav>
+    <ul>
+      
+      <li>
+        <a class="main-nav-link" href="/"
+          >Home</a
+        >
+      </li>
+      
+      <li>
+        <a class="main-nav-link" href="/about"
+          >About</a
+        >
+      </li>
+      
+      <li>
+        <a class="main-nav-link" href="https://github.com/hoehoetester"
+          >Github</a
+        >
+      </li>
+      
+      <li>
+        <a class="main-nav-link" href="/archives"
+          >Archives</a
+        >
+      </li>
+      
+    </ul>
+  </nav>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-Regex-basic" class="article article-type-post" itemscope
+  itemprop="blogPost">
+  <div class="article-meta">
+  </div>
+  <div class="article-inner">
+    
+    
+    <header class="article-header">
+      
+  
+    <h1 class="article-title" itemprop="name">
+      Regex basic
+    </h1>
+  
+
+      <span class="article-date">
+  <time datetime="2019-07-13T11:14:21.000Z" itemprop="datePublished">🕒 2019-07-13</time>
+</span>
+      
+      
+    </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+      <h1 id="Basics"><a href="#Basics" class="headerlink" title="Basics"></a>Basics</h1><ul>
+<li><code>.</code> –&gt; Any character (改行を除く任意の一文字)</li>
+</ul>
+<p>To search meta characters, escape by a backslash.<br>(メタ文字自体を検索したい場合は”<code>\</code>“でエスケープする)</p>
+<a id="more"></a>
+<h1 id="Character-classes"><a href="#Character-classes" class="headerlink" title="Character classes"></a>Character classes</h1><ul>
+<li><code>\d</code> –&gt; 0-9</li>
+<li><code>\w</code> –&gt; a-z, A-Z, 0-9, _</li>
+<li><code>\s</code> –&gt; whitespace、tab、new line</li>
+</ul>
+<p>(Present negations with uppercase)<br>(大文字にすると否定になる)</p>
+<ul>
+<li><code>\D</code> -&gt; Not <code>\d</code></li>
+<li><code>\W</code> -&gt; Not <code>\w</code></li>
+<li><code>\S</code> -&gt; Not <code>\s</code></li>
+</ul>
+<h1 id="Quantifiers"><a href="#Quantifiers" class="headerlink" title="Quantifiers"></a>Quantifiers</h1><ul>
+<li><code>{n}</code> –&gt; n 個</li>
+<li><code>{min,max}</code> –&gt; min 以上、max 以下</li>
+<li><code>{min,}</code> –&gt; min 以上</li>
+<li><code>{?}</code> –&gt; <code>{0,1}</code></li>
+<li><code>{+}</code> –&gt; <code>{1,}</code></li>
+<li><code>{\*}</code> –&gt; <code>{0,}</code></li>
+</ul>
+<p>03-3008-5432<br>0330085432<br><code>\d{2}-?\d{4}-?\d{4}</code></p>
+<p>03-3008-5432<br>0330085432<br>TEL03-3008-5432<br>T0330085432<br><code>\w\*\d{2}-?\d{4}-?\d{4}</code></p>
+<h1 id="Anchors"><a href="#Anchors" class="headerlink" title="Anchors"></a>Anchors</h1><ul>
+<li><code>^</code> –&gt; starts with</li>
+<li><code>\$</code> –&gt; ends with</li>
+<li><code>\b</code> –&gt; Boundary 単語の境界</li>
+</ul>
+<p>1 Tom 4<br>2 John 9<br>3 Hoe 3<br>4 HoeFua 8</p>
+<ul>
+<li><code>^\d</code> –&gt; only first number 最初の数字のみ</li>
+<li><code>\d\$</code> –&gt; only last number 末尾の数字のみ</li>
+<li><code>\b</code> –&gt; 単語の境界を意味する Boundary<br> <code>\bHoe\b</code> –&gt; only “Hoe”</li>
+</ul>
+<h1 id="OR-operator"><a href="#OR-operator" class="headerlink" title="OR operator"></a>OR operator</h1><ul>
+<li><code>abc|123</code> -&gt; “abc” or “123”</li>
+</ul>
+<p>example.com<br>example.net</p>
+<p><code>example\.com|example\.net</code><br><code>example\.(com|net)</code></p>
+<h1 id="Flags"><a href="#Flags" class="headerlink" title="Flags"></a>Flags</h1><ul>
+<li><code>/g</code> –&gt; Global</li>
+<li><code>/i</code> –&gt; Insensitive<br> <code>/aBc/i</code> would match “AbC”</li>
+</ul>
+<h1 id="Character-Classes"><a href="#Character-Classes" class="headerlink" title="Character Classes"></a>Character Classes</h1><ul>
+<li><code>[abc]</code> –&gt; “a” or “b” or “c”</li>
+</ul>
+<p>bat hat cat</p>
+<p><code>bat|hat|cat</code><br><code>(b|h|c)at</code><br><code>[bhc]at</code></p>
+<h1 id="Metacharacters-Inside-Character-Classes"><a href="#Metacharacters-Inside-Character-Classes" class="headerlink" title="Metacharacters Inside Character Classes"></a>Metacharacters Inside Character Classes</h1><ul>
+<li><code>[^]</code> -&gt; NOT</li>
+</ul>
+<p>bat hat cat eat<br><code>[^c]at</code> –&gt; Except for “cat”</p>
+<h1 id="Line-breake-and-Tab"><a href="#Line-breake-and-Tab" class="headerlink" title="Line breake and Tab"></a>Line breake and Tab</h1><ul>
+<li><code>[t]</code> –&gt; Tab</li>
+<li><code>[\r\n]</code> –&gt; Line breake（Windows）</li>
+<li><code>[\r]</code> –&gt; Line breake（MacOS(~v9)）</li>
+<li><code>[\n]</code> –&gt; Line breake（Unix, MacOS(v10~)）</li>
+<li><code>[\r\n|\r|\n]</code> –&gt; Line breake（All OS）</li>
+</ul>
+<h1 id="Capture"><a href="#Capture" class="headerlink" title="Capture"></a>Capture</h1><ul>
+<li><code>()</code><ul>
+<li><code>$1</code>, <code>$2</code>, …</li>
+</ul>
+</li>
+</ul>
+<p>hoehoeblog, <a href="https://hoehoetester.github.io/" target="_blank" rel="noopener">https://hoehoetester.github.io/</a><br>google, <a href="https://google.com" target="_blank" rel="noopener">https://google.com</a><br>example, <a href="https://example.com" target="_blank" rel="noopener">https://example.com</a></p>
+<p><code>(.+),\s?(.+)</code><br><code>&lt;a href=&quot;$2&quot;&gt;\$1&lt;/a&gt;</code> –&gt; <code>&lt;a href=&quot;https://hoehoetester.github.io/&quot;&gt;hoehoeblog&lt;/a&gt;</code></p>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
+<li><a href="https://medium.com/factory-mind/regex-tutorial-a-simple-cheatsheet-by-examples-649dc1c3f285" target="_blank" rel="noopener">https://medium.com/factory-mind/regex-tutorial-a-simple-cheatsheet-by-examples-649dc1c3f285</a></li>
+<li><a href="https://qiita.com/Yametaro/items/36493c107053ae996b47" target="_blank" rel="noopener">https://qiita.com/Yametaro/items/36493c107053ae996b47</a></li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Regex/">Regex</a></li></ul>
+
+    </footer>
+  </div>
+  
+  
+<nav id="article-nav">
+  
+    <a href="/2019/07/23/Getting-started-React-with-Express-server/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Getting started React with Express server
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/07/05/Format-Html-query-strings-wirh-VS-Code/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Format Html query strings with VS Code</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    <div id="site_search" class="widget-wrap">
+  <h3 class="widget-title">Search</h3>
+  <input type="text" id="local-search-input" name="q" results="0" placeholder="Search in my blog..."
+    class="form-control" />
+  <div id="local-search-result"></div>
+</div>
+  
+    
+<div class="widget-wrap">
+  <h3 class="widget-title">Recent Posts</h3>
+  <div class="widget">
+    <ul class="recent-posts">
+      
+      <li class="recent-post-item">
+        <a href="/2021/08/16/OOPS-I-want-to-undo-the-last-push-on-Github/"
+          >OOPS! I want to undo the last push on Github</a
+        >
+      </li>
+      
+      <li class="recent-post-item">
+        <a href="/2021/08/15/When-you-want-to-push-from-a-local-branch-to-a-remote-branch-that-is-the-same-name/"
+          >When you want to push from a local branch to a remote branch that is the same name</a
+        >
+      </li>
+      
+      <li class="recent-post-item">
+        <a href="/2021/08/03/Typescript-note-Literal-type-error/"
+          >Typescript note - Literal type error</a
+        >
+      </li>
+      
+      <li class="recent-post-item">
+        <a href="/2021/08/03/Typescript-note-Generics/"
+          >Typescript note - Generics</a
+        >
+      </li>
+      
+      <li class="recent-post-item">
+        <a href="/2021/08/02/How-to-execute-multiple-functions-in-ternary-operator/"
+          >How to execute multiple functions in ternary operator</a
+        >
+      </li>
+      
+      <li class="recent-post-item">
+        <a href="/2021/08/01/Create-dotnet-console-app-with-terminal/"
+          >Create dotnet console app with terminal</a
+        >
+      </li>
+      
+      <li class="recent-post-item">
+        <a href="/2021/07/13/react-testing-library-Change-the-size-of-debug-s-output/"
+          >react-testing-library: Change the size of debug&#39;s output</a
+        >
+      </li>
+      
+      <li class="recent-post-item">
+        <a href="/2021/03/14/Dev-note/"
+          >Dev note</a
+        >
+      </li>
+      
+      <li class="recent-post-item">
+        <a href="/2021/03/06/Format-setting-for-react-jsx-tag-spacing-with-Web-Storm/"
+          >Format setting for react/jsx-tag-spacing with Web Storm</a
+        >
+      </li>
+      
+      <li class="recent-post-item">
+        <a href="/2021/02/20/Change-the-destination-of-Mac-screenshots/"
+          >Change the destination of Mac screenshots</a
+        >
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Net/" style="font-size: 10px;">.Net</a> <a href="/tags/API/" style="font-size: 10px;">API</a> <a href="/tags/Accessibility/" style="font-size: 13.33px;">Accessibility</a> <a href="/tags/Angular/" style="font-size: 15px;">Angular</a> <a href="/tags/CSS/" style="font-size: 11.67px;">CSS</a> <a href="/tags/Cypress/" style="font-size: 10px;">Cypress</a> <a href="/tags/ES2015/" style="font-size: 13.33px;">ES2015</a> <a href="/tags/Express/" style="font-size: 10px;">Express</a> <a href="/tags/Git/" style="font-size: 16.67px;">Git</a> <a href="/tags/Hack/" style="font-size: 10px;">Hack</a> <a href="/tags/Heroku/" style="font-size: 10px;">Heroku</a> <a href="/tags/Hexo/" style="font-size: 11.67px;">Hexo</a> <a href="/tags/Hoe/" style="font-size: 11.67px;">Hoe</a> <a href="/tags/Javascript/" style="font-size: 20px;">Javascript</a> <a href="/tags/Jest/" style="font-size: 11.67px;">Jest</a> <a href="/tags/Mac/" style="font-size: 13.33px;">Mac</a> <a href="/tags/Mapbox/" style="font-size: 10px;">Mapbox</a> <a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/Mongo/" style="font-size: 10px;">Mongo</a> <a href="/tags/Node/" style="font-size: 11.67px;">Node</a> <a href="/tags/Objective/" style="font-size: 10px;">Objective</a> <a href="/tags/Parcel/" style="font-size: 11.67px;">Parcel</a> <a href="/tags/React/" style="font-size: 18.33px;">React</a> <a href="/tags/Regex/" style="font-size: 11.67px;">Regex</a> <a href="/tags/Splunk/" style="font-size: 10px;">Splunk</a> <a href="/tags/Stackoverflow/" style="font-size: 10px;">Stackoverflow</a> <a href="/tags/Terminal/" style="font-size: 10px;">Terminal</a> <a href="/tags/Typescript/" style="font-size: 13.33px;">Typescript</a> <a href="/tags/VS-Code/" style="font-size: 11.67px;">VS Code</a> <a href="/tags/WebStorm/" style="font-size: 10px;">WebStorm</a> <a href="/tags/Webpack/" style="font-size: 11.67px;">Webpack</a> <a href="/tags/dotenv/" style="font-size: 10px;">dotenv</a> <a href="/tags/npm/" style="font-size: 10px;">npm</a> <a href="/tags/redux-dev-tools/" style="font-size: 10px;">redux-dev-tools</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/08/">August 2021</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/07/">July 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/03/">March 2021</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/02/">February 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/12/">December 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/09/">September 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/07/">July 2020</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/">June 2020</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/05/">May 2020</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/04/">April 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">March 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/02/">February 2020</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/01/">January 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">November 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">September 2019</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">August 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">July 2019</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">April 2019</a><span class="archive-list-count">11</span></li></ul>
+    </div>
+  </div>
+
+
+  
+</aside>
+        
+      </div>
+    </div>
+  </div>
+  <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2021 hoehoetester<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+  <script>
+  console.log(`
+ _                   _                    _      _
+| |                 | |                  | |    | |
+| |__    ___    ___ | |__    ___    ___  | |__  | |  ___    __ _
+| '_ \\  / _ \\  / _ \\| '_ \\  / _ \\  / _ \\ | '_ \\ | | / _ \\  / _  |
+| | | || (_) ||  __/| | | || (_) ||  __/ | |_) || || (_) || (_| |
+|_| |_| \\___/  \\___||_| |_| \\___/  \\___| |_.__/ |_| \\___/  \\__, |
+                                                            __/ |
+                                                           |___/
+`)
+</script>
+
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+<script src="/js/search.js"></script>
+<script type="text/javascript">
+  var search_path = "search.xml";
+  if (search_path.length == 0) {
+    search_path = "search.xml";
+  }
+  var path = "/" + search_path;
+  searchFunc(path, "local-search-input", "local-search-result");
+</script>
+
+</body>
+</html>

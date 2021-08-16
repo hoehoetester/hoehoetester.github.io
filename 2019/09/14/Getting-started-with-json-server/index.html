@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-137779643-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+  
+  <title> Getting started with json-server | Hoehoe blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="GoalSet up json-server and axios Agenda Step 1: Set up package.json and install node modules Step 2: Create index.html Step 3: Create script.json Step 4: Create db.json Step 5: Run and results">
+<meta name="keywords" content="Javascript,Parcel">
+<meta property="og:type" content="article">
+<meta property="og:title" content=" Getting started with json-server">
+<meta property="og:url" content="http://yoursite.com/2019/09/14/Getting-started-with-json-server/index.html">
+<meta property="og:site_name" content="Hoehoe blog">
+<meta property="og:description" content="GoalSet up json-server and axios Agenda Step 1: Set up package.json and install node modules Step 2: Create index.html Step 3: Create script.json Step 4: Create db.json Step 5: Run and results">
+<meta property="og:locale" content="default">
+<meta property="og:image" content="https://user-images.githubusercontent.com/13145406/64855769-b6076880-d674-11e9-943e-a344aabbd55b.png">
+<meta property="og:image" content="https://user-images.githubusercontent.com/13145406/64855800-c4ee1b00-d674-11e9-937b-2ff2c1c9e5ce.png">
+<meta property="og:image" content="https://user-images.githubusercontent.com/13145406/64856283-b94f2400-d675-11e9-9f29-02a7ce42f57c.png">
+<meta property="og:updated_time" content="2021-08-16T09:55:42.856Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content=" Getting started with json-server">
+<meta name="twitter:description" content="GoalSet up json-server and axios Agenda Step 1: Set up package.json and install node modules Step 2: Create index.html Step 3: Create script.json Step 4: Create db.json Step 5: Run and results">
+<meta name="twitter:image" content="https://user-images.githubusercontent.com/13145406/64855769-b6076880-d674-11e9-943e-a344aabbd55b.png">
+  
+  
+    <link rel="icon" href="/images/favicon.ico">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+<body>
+  <div id="container">
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/about" class="mobile-nav-link">About</a>
+  
+    <a href="https://github.com/hoehoetester" class="mobile-nav-link">Github</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    <div id="wrap">
+      <header id="header">
+  <a id="main-nav-toggle" class="nav-icon"></a>
+
+  <a href="/" id="logo">
+    <h1>Hoehoe blog</h1>
+    <div>
+      Javascript is poison... <span class="main-nav__heading-icon">😈</span>
+    </div>
+  </a>
+
+  <nav>
+    <ul>
+      
+      <li>
+        <a class="main-nav-link" href="/"
+          >Home</a
+        >
+      </li>
+      
+      <li>
+        <a class="main-nav-link" href="/about"
+          >About</a
+        >
+      </li>
+      
+      <li>
+        <a class="main-nav-link" href="https://github.com/hoehoetester"
+          >Github</a
+        >
+      </li>
+      
+      <li>
+        <a class="main-nav-link" href="/archives"
+          >Archives</a
+        >
+      </li>
+      
+    </ul>
+  </nav>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-Getting-started-with-json-server" class="article article-type-post" itemscope
+  itemprop="blogPost">
+  <div class="article-meta">
+  </div>
+  <div class="article-inner">
+    
+    
+    <header class="article-header">
+      
+  
+    <h1 class="article-title" itemprop="name">
+       Getting started with json-server
+    </h1>
+  
+
+      <span class="article-date">
+  <time datetime="2019-09-13T12:00:00.000Z" itemprop="datePublished">🕒 2019-09-14</time>
+</span>
+      
+      
+    </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+      <h3 id="Goal"><a href="#Goal" class="headerlink" title="Goal"></a>Goal</h3><p>Set up json-server and axios</p>
+<h3 id="Agenda"><a href="#Agenda" class="headerlink" title="Agenda"></a>Agenda</h3><ul>
+<li>Step 1: Set up <code>package.json</code> and install node modules</li>
+<li>Step 2: Create <code>index.html</code></li>
+<li>Step 3: Create <code>script.json</code></li>
+<li>Step 4: Create <code>db.json</code></li>
+<li>Step 5: Run and results</li>
+</ul>
+<a id="more"></a>
+<h2 id="Step-1-Set-up-package-json-and-install-node-modules"><a href="#Step-1-Set-up-package-json-and-install-node-modules" class="headerlink" title="Step 1: Set up package.json and install node modules"></a>Step 1: Set up <code>package.json</code> and install node modules</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">npm init -y</span><br><span class="line">yarn add axios</span><br><span class="line">yarn add concurrently json-server parcel-bundler --dev</span><br></pre></td></tr></table></figure>
+<p>Edit scripts in <code>package.json</code><br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// package.json</span></span><br><span class="line"></span><br><span class="line">  <span class="string">"scripts"</span>: &#123;</span><br><span class="line">    <span class="string">"client"</span>: <span class="string">"parcel index.html --open"</span>,</span><br><span class="line">    <span class="string">"server"</span>: <span class="string">"json-server --watch db.json"</span>,</span><br><span class="line">    <span class="string">"start"</span>: <span class="string">"concurrently \"yarn server\" \"yarn client\""</span></span><br><span class="line">  &#125;,</span><br></pre></td></tr></table></figure></p>
+<h2 id="Step-2-Create-index-html"><a href="#Step-2-Create-index-html" class="headerlink" title="Step 2: Create index.html"></a>Step 2: Create <code>index.html</code></h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- index.html --&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"viewport"</span> <span class="attr">content</span>=<span class="string">"width=device-width, initial-scale=1.0"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"X-UA-Compatible"</span> <span class="attr">content</span>=<span class="string">"ie=edge"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>json-server demo<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="undefined">      * &#123;</span></span><br><span class="line"><span class="undefined">        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;</span></span><br><span class="line"><span class="undefined">      &#125;</span></span><br><span class="line"><span class="undefined">    </span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">h2</span>&gt;</span>json-server demo<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span>&gt;</span><span class="tag">&lt;<span class="name">button</span> <span class="attr">id</span>=<span class="string">"getAllUsers"</span>&gt;</span>getAllUsers<span class="tag">&lt;/<span class="name">button</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">id</span>=<span class="string">"name"</span> <span class="attr">placeholder</span>=<span class="string">"name"</span> /&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">button</span> <span class="attr">id</span>=<span class="string">"addUser"</span>&gt;</span>addUser<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">id</span>=<span class="string">"deleteUserId"</span> <span class="attr">placeholder</span>=<span class="string">"deleteUserId"</span> /&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">button</span> <span class="attr">id</span>=<span class="string">"deleteUser"</span>&gt;</span>deleteUser<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span> <span class="attr">id</span>=<span class="string">"result"</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"./script.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="Step-3-Create-script-js"><a href="#Step-3-Create-script-js" class="headerlink" title="Step 3: Create script.js"></a>Step 3: Create <code>script.js</code></h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// script.js</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> axios <span class="keyword">from</span> <span class="string">'axios'</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> url = <span class="string">'http://localhost:3000/users/'</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> btn_getAllUsers = <span class="built_in">document</span>.querySelector(<span class="string">'#getAllUsers'</span>);</span><br><span class="line"><span class="keyword">const</span> btn_addUser = <span class="built_in">document</span>.querySelector(<span class="string">'#addUser'</span>);</span><br><span class="line"><span class="keyword">const</span> btn_deleteUser = <span class="built_in">document</span>.querySelector(<span class="string">'#deleteUser'</span>);</span><br><span class="line"><span class="keyword">const</span> result = <span class="built_in">document</span>.querySelector(<span class="string">'#result'</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> log = <span class="function"><span class="params">data</span> =&gt;</span> &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(data);</span><br><span class="line">  result.innerHTML = <span class="built_in">JSON</span>.stringify(data);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> getAllUser = <span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">  axios.get(url).then(<span class="function"><span class="params">res</span> =&gt;</span> log(res.data));</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">btn_getAllUsers.onclick = <span class="function"><span class="params">()</span> =&gt;</span> getAllUser();</span><br><span class="line"></span><br><span class="line">btn_addUser.onclick = <span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">const</span> newUser = &#123;</span><br><span class="line">    id: <span class="keyword">new</span> <span class="built_in">Date</span>().valueOf(),</span><br><span class="line">    name: <span class="built_in">document</span>.querySelector(<span class="string">'#name'</span>).value</span><br><span class="line">  &#125;;</span><br><span class="line"></span><br><span class="line">  axios.post(url, newUser).then(<span class="function"><span class="params">res</span> =&gt;</span> &#123;</span><br><span class="line">    log(res);</span><br><span class="line">    getAllUser();</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">btn_deleteUser.onclick = <span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">const</span> deleteUserId = <span class="built_in">document</span>.querySelector(<span class="string">'#deleteUserId'</span>).value;</span><br><span class="line">  axios.delete(url + deleteUserId).then(<span class="function"><span class="params">res</span> =&gt;</span> getAllUser());</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">getAllUser();</span><br></pre></td></tr></table></figure>
+<h2 id="Step-4-Create-db-json"><a href="#Step-4-Create-db-json" class="headerlink" title="Step 4: Create db.json"></a>Step 4: Create <code>db.json</code></h2><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">// db.json</span><br><span class="line"></span><br><span class="line">&#123;</span><br><span class="line">  <span class="attr">"users"</span>: [</span><br><span class="line">    &#123;</span><br><span class="line">      <span class="attr">"id"</span>: <span class="number">1</span>,</span><br><span class="line">      <span class="attr">"name"</span>: <span class="string">"hoe"</span></span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">      <span class="attr">"id"</span>: <span class="number">2</span>,</span><br><span class="line">      <span class="attr">"name"</span>: <span class="string">"fua"</span></span><br><span class="line">    &#125;</span><br><span class="line">  ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="Step-5-Run-and-result"><a href="#Step-5-Run-and-result" class="headerlink" title="Step 5: Run and result"></a>Step 5: Run and result</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yarn start</span><br></pre></td></tr></table></figure>
+<p><img src="https://user-images.githubusercontent.com/13145406/64855769-b6076880-d674-11e9-943e-a344aabbd55b.png" alt="json-server1"></p>
+<p><img src="https://user-images.githubusercontent.com/13145406/64855800-c4ee1b00-d674-11e9-937b-2ff2c1c9e5ce.png" alt="json-server2"></p>
+<p><img src="https://user-images.githubusercontent.com/13145406/64856283-b94f2400-d675-11e9-9f29-02a7ce42f57c.png" alt="json-server3"></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Javascript/">Javascript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Parcel/">Parcel</a></li></ul>
+
+    </footer>
+  </div>
+  
+  
+<nav id="article-nav">
+  
+    <a href="/2019/09/15/Angular-Content-Projection/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Angular - Content Projection
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/09/13/Order-of-css-property-with-stylelint-config-idiomatic-css/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Order of css property with stylelint-config-idiomatic-css</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    <div id="site_search" class="widget-wrap">
+  <h3 class="widget-title">Search</h3>
+  <input type="text" id="local-search-input" name="q" results="0" placeholder="Search in my blog..."
+    class="form-control" />
+  <div id="local-search-result"></div>
+</div>
+  
+    
+<div class="widget-wrap">
+  <h3 class="widget-title">Recent Posts</h3>
+  <div class="widget">
+    <ul class="recent-posts">
+      
+      <li class="recent-post-item">
+        <a href="/2021/08/16/OOPS-I-want-to-undo-the-last-push-on-Github/"
+          >OOPS! I want to undo the last push on Github</a
+        >
+      </li>
+      
+      <li class="recent-post-item">
+        <a href="/2021/08/15/When-you-want-to-push-from-a-local-branch-to-a-remote-branch-that-is-the-same-name/"
+          >When you want to push from a local branch to a remote branch that is the same name</a
+        >
+      </li>
+      
+      <li class="recent-post-item">
+        <a href="/2021/08/03/Typescript-note-Literal-type-error/"
+          >Typescript note - Literal type error</a
+        >
+      </li>
+      
+      <li class="recent-post-item">
+        <a href="/2021/08/03/Typescript-note-Generics/"
+          >Typescript note - Generics</a
+        >
+      </li>
+      
+      <li class="recent-post-item">
+        <a href="/2021/08/02/How-to-execute-multiple-functions-in-ternary-operator/"
+          >How to execute multiple functions in ternary operator</a
+        >
+      </li>
+      
+      <li class="recent-post-item">
+        <a href="/2021/08/01/Create-dotnet-console-app-with-terminal/"
+          >Create dotnet console app with terminal</a
+        >
+      </li>
+      
+      <li class="recent-post-item">
+        <a href="/2021/07/13/react-testing-library-Change-the-size-of-debug-s-output/"
+          >react-testing-library: Change the size of debug&#39;s output</a
+        >
+      </li>
+      
+      <li class="recent-post-item">
+        <a href="/2021/03/14/Dev-note/"
+          >Dev note</a
+        >
+      </li>
+      
+      <li class="recent-post-item">
+        <a href="/2021/03/06/Format-setting-for-react-jsx-tag-spacing-with-Web-Storm/"
+          >Format setting for react/jsx-tag-spacing with Web Storm</a
+        >
+      </li>
+      
+      <li class="recent-post-item">
+        <a href="/2021/02/20/Change-the-destination-of-Mac-screenshots/"
+          >Change the destination of Mac screenshots</a
+        >
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Net/" style="font-size: 10px;">.Net</a> <a href="/tags/API/" style="font-size: 10px;">API</a> <a href="/tags/Accessibility/" style="font-size: 13.33px;">Accessibility</a> <a href="/tags/Angular/" style="font-size: 15px;">Angular</a> <a href="/tags/CSS/" style="font-size: 11.67px;">CSS</a> <a href="/tags/Cypress/" style="font-size: 10px;">Cypress</a> <a href="/tags/ES2015/" style="font-size: 13.33px;">ES2015</a> <a href="/tags/Express/" style="font-size: 10px;">Express</a> <a href="/tags/Git/" style="font-size: 16.67px;">Git</a> <a href="/tags/Hack/" style="font-size: 10px;">Hack</a> <a href="/tags/Heroku/" style="font-size: 10px;">Heroku</a> <a href="/tags/Hexo/" style="font-size: 11.67px;">Hexo</a> <a href="/tags/Hoe/" style="font-size: 11.67px;">Hoe</a> <a href="/tags/Javascript/" style="font-size: 20px;">Javascript</a> <a href="/tags/Jest/" style="font-size: 11.67px;">Jest</a> <a href="/tags/Mac/" style="font-size: 13.33px;">Mac</a> <a href="/tags/Mapbox/" style="font-size: 10px;">Mapbox</a> <a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/Mongo/" style="font-size: 10px;">Mongo</a> <a href="/tags/Node/" style="font-size: 11.67px;">Node</a> <a href="/tags/Objective/" style="font-size: 10px;">Objective</a> <a href="/tags/Parcel/" style="font-size: 11.67px;">Parcel</a> <a href="/tags/React/" style="font-size: 18.33px;">React</a> <a href="/tags/Regex/" style="font-size: 11.67px;">Regex</a> <a href="/tags/Splunk/" style="font-size: 10px;">Splunk</a> <a href="/tags/Stackoverflow/" style="font-size: 10px;">Stackoverflow</a> <a href="/tags/Terminal/" style="font-size: 10px;">Terminal</a> <a href="/tags/Typescript/" style="font-size: 13.33px;">Typescript</a> <a href="/tags/VS-Code/" style="font-size: 11.67px;">VS Code</a> <a href="/tags/WebStorm/" style="font-size: 10px;">WebStorm</a> <a href="/tags/Webpack/" style="font-size: 11.67px;">Webpack</a> <a href="/tags/dotenv/" style="font-size: 10px;">dotenv</a> <a href="/tags/npm/" style="font-size: 10px;">npm</a> <a href="/tags/redux-dev-tools/" style="font-size: 10px;">redux-dev-tools</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/08/">August 2021</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/07/">July 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/03/">March 2021</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/02/">February 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/12/">December 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/09/">September 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/07/">July 2020</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/">June 2020</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/05/">May 2020</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/04/">April 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">March 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/02/">February 2020</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/01/">January 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">November 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">September 2019</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">August 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">July 2019</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">April 2019</a><span class="archive-list-count">11</span></li></ul>
+    </div>
+  </div>
+
+
+  
+</aside>
+        
+      </div>
+    </div>
+  </div>
+  <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2021 hoehoetester<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+  <script>
+  console.log(`
+ _                   _                    _      _
+| |                 | |                  | |    | |
+| |__    ___    ___ | |__    ___    ___  | |__  | |  ___    __ _
+| '_ \\  / _ \\  / _ \\| '_ \\  / _ \\  / _ \\ | '_ \\ | | / _ \\  / _  |
+| | | || (_) ||  __/| | | || (_) ||  __/ | |_) || || (_) || (_| |
+|_| |_| \\___/  \\___||_| |_| \\___/  \\___| |_.__/ |_| \\___/  \\__, |
+                                                            __/ |
+                                                           |___/
+`)
+</script>
+
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+<script src="/js/search.js"></script>
+<script type="text/javascript">
+  var search_path = "search.xml";
+  if (search_path.length == 0) {
+    search_path = "search.xml";
+  }
+  var path = "/" + search_path;
+  searchFunc(path, "local-search-input", "local-search-result");
+</script>
+
+</body>
+</html>

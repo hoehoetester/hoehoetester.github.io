@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-137779643-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+  
+  <title>Getting started ES2015 and SASS(plus autoprefixer) with Webpack 4 | Hoehoe blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="👑 GoalCreate a ES2015 + Sass project with Webpack 4 🎓 Agenda Setup webpack Add HtmlWebpackPlugin Add webpack-dev-server Add Babel Add (SASS) SASS Add MiniCssExtractPlugin Add postcss-loader and auto">
+<meta name="keywords" content="Javascript,ES2015,Webpack">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Getting started ES2015 and SASS(plus autoprefixer) with Webpack 4">
+<meta property="og:url" content="http://yoursite.com/2019/11/10/Getting-started-ES2015-and-SASS-plus-autoprefixer-with-Webpack-4/index.html">
+<meta property="og:site_name" content="Hoehoe blog">
+<meta property="og:description" content="👑 GoalCreate a ES2015 + Sass project with Webpack 4 🎓 Agenda Setup webpack Add HtmlWebpackPlugin Add webpack-dev-server Add Babel Add (SASS) SASS Add MiniCssExtractPlugin Add postcss-loader and auto">
+<meta property="og:locale" content="default">
+<meta property="og:image" content="https://user-images.githubusercontent.com/13145406/68533676-9fd60a00-0390-11ea-95e7-e7a2efb36134.png">
+<meta property="og:updated_time" content="2021-08-16T09:55:42.852Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Getting started ES2015 and SASS(plus autoprefixer) with Webpack 4">
+<meta name="twitter:description" content="👑 GoalCreate a ES2015 + Sass project with Webpack 4 🎓 Agenda Setup webpack Add HtmlWebpackPlugin Add webpack-dev-server Add Babel Add (SASS) SASS Add MiniCssExtractPlugin Add postcss-loader and auto">
+<meta name="twitter:image" content="https://user-images.githubusercontent.com/13145406/68533676-9fd60a00-0390-11ea-95e7-e7a2efb36134.png">
+  
+  
+    <link rel="icon" href="/images/favicon.ico">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+<body>
+  <div id="container">
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/about" class="mobile-nav-link">About</a>
+  
+    <a href="https://github.com/hoehoetester" class="mobile-nav-link">Github</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    <div id="wrap">
+      <header id="header">
+  <a id="main-nav-toggle" class="nav-icon"></a>
+
+  <a href="/" id="logo">
+    <h1>Hoehoe blog</h1>
+    <div>
+      Javascript is poison... <span class="main-nav__heading-icon">😈</span>
+    </div>
+  </a>
+
+  <nav>
+    <ul>
+      
+      <li>
+        <a class="main-nav-link" href="/"
+          >Home</a
+        >
+      </li>
+      
+      <li>
+        <a class="main-nav-link" href="/about"
+          >About</a
+        >
+      </li>
+      
+      <li>
+        <a class="main-nav-link" href="https://github.com/hoehoetester"
+          >Github</a
+        >
+      </li>
+      
+      <li>
+        <a class="main-nav-link" href="/archives"
+          >Archives</a
+        >
+      </li>
+      
+    </ul>
+  </nav>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-Getting-started-ES2015-and-SASS-plus-autoprefixer-with-Webpack-4" class="article article-type-post" itemscope
+  itemprop="blogPost">
+  <div class="article-meta">
+  </div>
+  <div class="article-inner">
+    
+    
+    <header class="article-header">
+      
+  
+    <h1 class="article-title" itemprop="name">
+      Getting started ES2015 and SASS(plus autoprefixer) with Webpack 4
+    </h1>
+  
+
+      <span class="article-date">
+  <time datetime="2019-11-09T19:13:21.000Z" itemprop="datePublished">🕒 2019-11-10</time>
+</span>
+      
+      
+    </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+      <h3 id="👑-Goal"><a href="#👑-Goal" class="headerlink" title="👑 Goal"></a>👑 Goal</h3><p>Create a ES2015 + Sass project with Webpack 4</p>
+<h3 id="🎓-Agenda"><a href="#🎓-Agenda" class="headerlink" title="🎓 Agenda"></a>🎓 Agenda</h3><ol>
+<li>Setup webpack</li>
+<li>Add HtmlWebpackPlugin</li>
+<li>Add webpack-dev-server</li>
+<li>Add Babel</li>
+<li>Add (SASS) SASS</li>
+<li>Add MiniCssExtractPlugin</li>
+<li>Add postcss-loader and autoprefixer</li>
+</ol>
+<a id="more"></a>
+<h3 id="🚩-Step-1-Setup-webpack"><a href="#🚩-Step-1-Setup-webpack" class="headerlink" title="🚩 Step 1: Setup webpack"></a>🚩 Step 1: Setup webpack</h3><p><code>yarn init -y</code></p>
+<p><code>yarn add -D webpack webpack-cli</code></p>
+<p>👉 Create <code>webpack.config.js</code></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// webpack.config.js</span></span><br><span class="line"><span class="keyword">const</span> path = <span class="built_in">require</span>(<span class="string">'path'</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> outputPath = path.resolve(__dirname, <span class="string">'dist'</span>);</span><br><span class="line"></span><br><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">  mode: <span class="string">'development'</span>,</span><br><span class="line">  entry: <span class="string">'./src/index.js'</span>,</span><br><span class="line">  output: &#123;</span><br><span class="line">    path: outputPath,</span><br><span class="line">    filename: <span class="string">'main.js'</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>👉 Add scripts to <code>package.json</code> file</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">// package.json</span><br><span class="line"></span><br><span class="line">...</span><br><span class="line">"scripts": &#123;</span><br><span class="line">    "start": "webpack"</span><br><span class="line">&#125;</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+<p>👉 Create <code>src</code> directory and add <code>index.js</code> file</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// index.js</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">'hoe'</span>);</span><br></pre></td></tr></table></figure>
+<p>✔️ TEST<br><code>yarn start</code> ➡️ <code>dist</code> directory created with <code>main.js</code> file in it</p>
+<h3 id="💡-Git-setup"><a href="#💡-Git-setup" class="headerlink" title="💡 Git setup"></a>💡 Git setup</h3><p><code>git init</code></p>
+<p>👉 Create <code>.gitignore</code> file</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">// .gitignore</span><br><span class="line"></span><br><span class="line">node_modules</span><br><span class="line">dist</span><br></pre></td></tr></table></figure>
+<h3 id="🚩-Step-2-HtmlWebpackPlugin"><a href="#🚩-Step-2-HtmlWebpackPlugin" class="headerlink" title="🚩 Step 2: HtmlWebpackPlugin"></a>🚩 Step 2: HtmlWebpackPlugin</h3><p><code>yarn add -D html-webpack-plugin</code></p>
+<p>👉 Edit <code>webpack.config.js</code></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// webpack.config.js</span></span><br><span class="line"></span><br><span class="line">...</span><br><span class="line"><span class="keyword">const</span> HtmlWebpackPlugin = <span class="built_in">require</span>(<span class="string">'html-webpack-plugin'</span>);</span><br><span class="line">...</span><br><span class="line">plugins: [</span><br><span class="line">  <span class="keyword">new</span> HtmlWebpackPlugin(&#123;</span><br><span class="line">    template: <span class="string">'./src/template.html'</span>,</span><br><span class="line">    hash: <span class="literal">true</span></span><br><span class="line">  &#125;)</span><br><span class="line">]</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+<p>👉 Create <code>template.html</code> file in <code>src</code> directory<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- template.html --&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"viewport"</span> <span class="attr">content</span>=<span class="string">"width=device-width, initial-scale=1.0"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"X-UA-Compatible"</span> <span class="attr">content</span>=<span class="string">"ie=edge"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Document<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">h1</span>&gt;</span>hoe<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>✔️ TEST<br><code>yarn start</code> ➡️ <code>index.html</code> file created in <code>dist</code> directory</p>
+<h3 id="🚩-Step-3-Add-webpack-dev-server"><a href="#🚩-Step-3-Add-webpack-dev-server" class="headerlink" title="🚩 Step 3: Add webpack-dev-server"></a>🚩 Step 3: Add webpack-dev-server</h3><p><code>yarn add -D webpack-dev-server</code></p>
+<p>👉 Edit <code>webpack.config.js</code></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// webpack.config.js</span></span><br><span class="line"></span><br><span class="line">...</span><br><span class="line">devServer: &#123;</span><br><span class="line">  contentBase: outputPath</span><br><span class="line">&#125;</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+<p>👉 Edit <code>package.json</code> file</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">// package.json</span><br><span class="line"></span><br><span class="line">...</span><br><span class="line">&quot;scripts&quot;: &#123;</span><br><span class="line">  &quot;start&quot;: &quot;webpack-dev-server&quot;,</span><br><span class="line">  &quot;build&quot;: &quot;webpack&quot;</span><br><span class="line">&#125;,</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+<p>✔️ TEST<br><code>yarn start</code> starts <code>webpack-dev-server</code> and the project is running at <code>http://localhost:8080/</code></p>
+<h3 id="🚩-Step-4-Add-Babel"><a href="#🚩-Step-4-Add-Babel" class="headerlink" title="🚩 Step 4: Add Babel"></a>🚩 Step 4: Add Babel</h3><p><code>yarn add -D babel-loader @babel/core @babel/preset-env</code></p>
+<p>👉 Create <code>.babelrc</code> in root</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// .babelrc</span></span><br><span class="line"></span><br><span class="line">&#123;</span><br><span class="line">  <span class="string">"presets"</span>: [<span class="string">"@babel/preset-env"</span>]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>👉 Edit <code>webpack.config.js</code></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// webpack.config.js</span></span><br><span class="line"></span><br><span class="line">...</span><br><span class="line"><span class="built_in">module</span>: &#123;</span><br><span class="line">  rules: [</span><br><span class="line">    &#123;</span><br><span class="line">      test: <span class="regexp">/\.js$/</span>,</span><br><span class="line">      loader: <span class="string">'babel-loader'</span></span><br><span class="line">    &#125;</span><br><span class="line">  ]</span><br><span class="line">&#125;</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+<p>👉 Add <code>sub.js</code> in <code>src</code></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// sub.js</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> msg = <span class="string">'hoe'</span>;</span><br></pre></td></tr></table></figure>
+<p>👉 Edit <code>index.js</code></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// index.js</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> &#123; msg &#125; <span class="keyword">from</span> <span class="string">'./sub'</span>;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(msg);</span><br></pre></td></tr></table></figure>
+<p>✔️ TEST<br><code>yarn start</code> –&gt; open <code>http://localhost:8080/</code> and <code>hoe</code> is logged in console.</p>
+<h3 id="🚩-Step-5-Add-SASS-SCSS"><a href="#🚩-Step-5-Add-SASS-SCSS" class="headerlink" title="🚩 Step 5: Add SASS(SCSS)"></a>🚩 Step 5: Add SASS(SCSS)</h3><p><code>yarn add -D style-loader css-loader sass-loader node-sass</code></p>
+<p>👉 Create <code>style.scss</code> in <code>src</code><br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">// style.scss</span><br><span class="line"></span><br><span class="line">$bg-color: tomato;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">body</span> &#123;</span><br><span class="line">  <span class="attribute">background-color</span>: $bg-color;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>👉 Edit <code>index.js</code></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// index.js</span></span><br><span class="line"></span><br><span class="line">...</span><br><span class="line"><span class="keyword">import</span> <span class="string">'./style.scss'</span>;</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+<p>👉 Edit <code>webpack.config.js</code></p>
+<p>Add a new <code>test</code> in <code>rules</code></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// webpack.config.js</span></span><br><span class="line"></span><br><span class="line">...</span><br><span class="line">&#123;</span><br><span class="line">  test: <span class="regexp">/\.(sc|c)ss$/</span>,</span><br><span class="line">  use: [<span class="string">'style-loader'</span>, <span class="string">'css-loader'</span>, <span class="string">'sass-loader'</span>]</span><br><span class="line">&#125;</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+<p>✔️ TEST<br><code>yarn start</code> –&gt; open <code>http://localhost:8080/</code> and background color is 🍅<code>tomato</code>.</p>
+<h3 id="🚩-Step-6-Add-MiniCssExtractPlugin"><a href="#🚩-Step-6-Add-MiniCssExtractPlugin" class="headerlink" title="🚩 Step 6: Add MiniCssExtractPlugin"></a>🚩 Step 6: Add MiniCssExtractPlugin</h3><p><code>yarn add -D mini-css-extract-plugin</code></p>
+<p>👉 Remove <code>style-loader</code></p>
+<p><code>yarn remove style-loader</code></p>
+<p>👉 Edit <code>webpack.config.js</code></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// webpack.config.js</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> MiniCssExtractPlugin = <span class="built_in">require</span>(<span class="string">'mini-css-extract-plugin'</span>);</span><br><span class="line">...</span><br><span class="line">&#123;</span><br><span class="line">  test: <span class="regexp">/\.(sc|c)ss$/</span>,</span><br><span class="line">  use: [</span><br><span class="line">    &#123; <span class="attr">loader</span>: MiniCssExtractPlugin.loader, <span class="attr">options</span>: &#123;&#125; &#125;,</span><br><span class="line">    <span class="string">'css-loader'</span>,</span><br><span class="line">    <span class="string">'sass-loader'</span></span><br><span class="line">  ]</span><br><span class="line">&#125;</span><br><span class="line">...</span><br><span class="line">plugins: [</span><br><span class="line">  <span class="keyword">new</span> MiniCssExtractPlugin(&#123;&#125;),</span><br><span class="line">  <span class="keyword">new</span> HtmlWebpackPlugin(&#123;</span><br><span class="line">    template: <span class="string">'./src/template.html'</span>,</span><br><span class="line">    hash: <span class="literal">true</span></span><br><span class="line">  &#125;)</span><br><span class="line">]</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+<p>✔️ TEST<br><code>yarn build</code> –&gt; <code>main.css</code> is created in <code>dist</code> directory.</p>
+<h3 id="🚩-Step-7-Add-Autoprefixer"><a href="#🚩-Step-7-Add-Autoprefixer" class="headerlink" title="🚩 Step 7: Add Autoprefixer"></a>🚩 Step 7: Add Autoprefixer</h3><p><code>yarn add -D postcss-loader and autoprefixer</code></p>
+<p>👉 Create <code>postcss.config.js</code> in root</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// postcss.config.js</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">  plugins: [<span class="built_in">require</span>(<span class="string">'autoprefixer'</span>)(&#123; <span class="attr">grid</span>: <span class="literal">true</span> &#125;)]</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>👉 Edit <code>webpack.config.js</code></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// webpack.config.js</span></span><br><span class="line"></span><br><span class="line">...</span><br><span class="line">&#123;</span><br><span class="line">  test: <span class="regexp">/\.(sc|c)ss$/</span>,</span><br><span class="line">  use: [</span><br><span class="line">    &#123; <span class="attr">loader</span>: MiniCssExtractPlugin.loader, <span class="attr">options</span>: &#123;&#125; &#125;,</span><br><span class="line">    <span class="string">'css-loader'</span>,</span><br><span class="line">    <span class="string">'postcss-loader'</span>,</span><br><span class="line">    <span class="string">'sass-loader'</span></span><br><span class="line">  ]</span><br><span class="line">&#125;</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+<p>👉 Edit <code>style.scss</code></p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">// style.scss</span><br><span class="line"></span><br><span class="line">...</span><br><span class="line"><span class="selector-tag">body</span> &#123;</span><br><span class="line">  <span class="attribute">background-color</span>: $bg-color;</span><br><span class="line">  <span class="attribute">display</span>: grid;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>✔️ TEST<br><code>yarn start</code> –&gt; open <code>http://localhost:8080/</code> and <code>&lt;body/&gt;</code> has ‘display: -ms-grid’ and ‘display: grid’.</p>
+<p><img src="https://user-images.githubusercontent.com/13145406/68533676-9fd60a00-0390-11ea-95e7-e7a2efb36134.png" alt="image"></p>
+<p>*This project can be found;</p>
+<ul>
+<li><a href="https://github.com/hoehoetester/hello-webpack4" target="_blank" rel="noopener">https://github.com/hoehoetester/hello-webpack4</a></li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ES2015/">ES2015</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Javascript/">Javascript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Webpack/">Webpack</a></li></ul>
+
+    </footer>
+  </div>
+  
+  
+<nav id="article-nav">
+  
+    <a href="/2020/01/31/Splunk-basics/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Splunk basics
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/09/20/Angular-EventEmitter/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Angular EventEmitter</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    <div id="site_search" class="widget-wrap">
+  <h3 class="widget-title">Search</h3>
+  <input type="text" id="local-search-input" name="q" results="0" placeholder="Search in my blog..."
+    class="form-control" />
+  <div id="local-search-result"></div>
+</div>
+  
+    
+<div class="widget-wrap">
+  <h3 class="widget-title">Recent Posts</h3>
+  <div class="widget">
+    <ul class="recent-posts">
+      
+      <li class="recent-post-item">
+        <a href="/2021/08/16/OOPS-I-want-to-undo-the-last-push-on-Github/"
+          >OOPS! I want to undo the last push on Github</a
+        >
+      </li>
+      
+      <li class="recent-post-item">
+        <a href="/2021/08/15/When-you-want-to-push-from-a-local-branch-to-a-remote-branch-that-is-the-same-name/"
+          >When you want to push from a local branch to a remote branch that is the same name</a
+        >
+      </li>
+      
+      <li class="recent-post-item">
+        <a href="/2021/08/03/Typescript-note-Literal-type-error/"
+          >Typescript note - Literal type error</a
+        >
+      </li>
+      
+      <li class="recent-post-item">
+        <a href="/2021/08/03/Typescript-note-Generics/"
+          >Typescript note - Generics</a
+        >
+      </li>
+      
+      <li class="recent-post-item">
+        <a href="/2021/08/02/How-to-execute-multiple-functions-in-ternary-operator/"
+          >How to execute multiple functions in ternary operator</a
+        >
+      </li>
+      
+      <li class="recent-post-item">
+        <a href="/2021/08/01/Create-dotnet-console-app-with-terminal/"
+          >Create dotnet console app with terminal</a
+        >
+      </li>
+      
+      <li class="recent-post-item">
+        <a href="/2021/07/13/react-testing-library-Change-the-size-of-debug-s-output/"
+          >react-testing-library: Change the size of debug&#39;s output</a
+        >
+      </li>
+      
+      <li class="recent-post-item">
+        <a href="/2021/03/14/Dev-note/"
+          >Dev note</a
+        >
+      </li>
+      
+      <li class="recent-post-item">
+        <a href="/2021/03/06/Format-setting-for-react-jsx-tag-spacing-with-Web-Storm/"
+          >Format setting for react/jsx-tag-spacing with Web Storm</a
+        >
+      </li>
+      
+      <li class="recent-post-item">
+        <a href="/2021/02/20/Change-the-destination-of-Mac-screenshots/"
+          >Change the destination of Mac screenshots</a
+        >
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Net/" style="font-size: 10px;">.Net</a> <a href="/tags/API/" style="font-size: 10px;">API</a> <a href="/tags/Accessibility/" style="font-size: 13.33px;">Accessibility</a> <a href="/tags/Angular/" style="font-size: 15px;">Angular</a> <a href="/tags/CSS/" style="font-size: 11.67px;">CSS</a> <a href="/tags/Cypress/" style="font-size: 10px;">Cypress</a> <a href="/tags/ES2015/" style="font-size: 13.33px;">ES2015</a> <a href="/tags/Express/" style="font-size: 10px;">Express</a> <a href="/tags/Git/" style="font-size: 16.67px;">Git</a> <a href="/tags/Hack/" style="font-size: 10px;">Hack</a> <a href="/tags/Heroku/" style="font-size: 10px;">Heroku</a> <a href="/tags/Hexo/" style="font-size: 11.67px;">Hexo</a> <a href="/tags/Hoe/" style="font-size: 11.67px;">Hoe</a> <a href="/tags/Javascript/" style="font-size: 20px;">Javascript</a> <a href="/tags/Jest/" style="font-size: 11.67px;">Jest</a> <a href="/tags/Mac/" style="font-size: 13.33px;">Mac</a> <a href="/tags/Mapbox/" style="font-size: 10px;">Mapbox</a> <a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/Mongo/" style="font-size: 10px;">Mongo</a> <a href="/tags/Node/" style="font-size: 11.67px;">Node</a> <a href="/tags/Objective/" style="font-size: 10px;">Objective</a> <a href="/tags/Parcel/" style="font-size: 11.67px;">Parcel</a> <a href="/tags/React/" style="font-size: 18.33px;">React</a> <a href="/tags/Regex/" style="font-size: 11.67px;">Regex</a> <a href="/tags/Splunk/" style="font-size: 10px;">Splunk</a> <a href="/tags/Stackoverflow/" style="font-size: 10px;">Stackoverflow</a> <a href="/tags/Terminal/" style="font-size: 10px;">Terminal</a> <a href="/tags/Typescript/" style="font-size: 13.33px;">Typescript</a> <a href="/tags/VS-Code/" style="font-size: 11.67px;">VS Code</a> <a href="/tags/WebStorm/" style="font-size: 10px;">WebStorm</a> <a href="/tags/Webpack/" style="font-size: 11.67px;">Webpack</a> <a href="/tags/dotenv/" style="font-size: 10px;">dotenv</a> <a href="/tags/npm/" style="font-size: 10px;">npm</a> <a href="/tags/redux-dev-tools/" style="font-size: 10px;">redux-dev-tools</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/08/">August 2021</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/07/">July 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/03/">March 2021</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/02/">February 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/12/">December 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/09/">September 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/07/">July 2020</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/">June 2020</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/05/">May 2020</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/04/">April 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">March 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/02/">February 2020</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/01/">January 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">November 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">September 2019</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">August 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">July 2019</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">April 2019</a><span class="archive-list-count">11</span></li></ul>
+    </div>
+  </div>
+
+
+  
+</aside>
+        
+      </div>
+    </div>
+  </div>
+  <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2021 hoehoetester<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+  <script>
+  console.log(`
+ _                   _                    _      _
+| |                 | |                  | |    | |
+| |__    ___    ___ | |__    ___    ___  | |__  | |  ___    __ _
+| '_ \\  / _ \\  / _ \\| '_ \\  / _ \\  / _ \\ | '_ \\ | | / _ \\  / _  |
+| | | || (_) ||  __/| | | || (_) ||  __/ | |_) || || (_) || (_| |
+|_| |_| \\___/  \\___||_| |_| \\___/  \\___| |_.__/ |_| \\___/  \\__, |
+                                                            __/ |
+                                                           |___/
+`)
+</script>
+
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+<script src="/js/search.js"></script>
+<script type="text/javascript">
+  var search_path = "search.xml";
+  if (search_path.length == 0) {
+    search_path = "search.xml";
+  }
+  var path = "/" + search_path;
+  searchFunc(path, "local-search-input", "local-search-result");
+</script>
+
+</body>
+</html>
