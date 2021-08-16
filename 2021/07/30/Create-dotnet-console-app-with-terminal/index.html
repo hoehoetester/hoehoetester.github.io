@@ -18,22 +18,23 @@ ga('send', 'pageview');
 
 
   
-  <title>Angular - ng-template basic | Hoehoe blog</title>
+  <title>Create dotnet console app with terminal | Hoehoe blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="What is ng-template?ng-template creates templates that are not displayed by default.It is displayed only when specified when used with a control structure such as if.">
-<meta name="keywords" content="Angular">
+  <meta name="description" content="🚗 1. Create a project directory and move into it12mkdir HogeConsoleAppcd HogeConsoleApp">
+<meta name="keywords" content=".Net">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Angular - ng-template basic">
-<meta property="og:url" content="http://yoursite.com/2019/08/14/Angular-ng-template-basic/index.html">
+<meta property="og:title" content="Create dotnet console app with terminal">
+<meta property="og:url" content="http://yoursite.com/2021/07/30/Create-dotnet-console-app-with-terminal/index.html">
 <meta property="og:site_name" content="Hoehoe blog">
-<meta property="og:description" content="What is ng-template?ng-template creates templates that are not displayed by default.It is displayed only when specified when used with a control structure such as if.">
+<meta property="og:description" content="🚗 1. Create a project directory and move into it12mkdir HogeConsoleAppcd HogeConsoleApp">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="https://user-images.githubusercontent.com/13145406/63014034-b11e9000-bee1-11e9-9aec-b64c4104dc03.png">
-<meta property="og:updated_time" content="2021-08-16T09:55:42.846Z">
+<meta property="og:image" content="https://user-images.githubusercontent.com/13145406/127850680-57fe4712-33c3-4795-887b-6febeef92630.png">
+<meta property="og:image" content="https://user-images.githubusercontent.com/13145406/127850353-748bd6b4-1458-49f8-97df-51621ee23ac8.png">
+<meta property="og:updated_time" content="2021-08-16T10:33:03.672Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Angular - ng-template basic">
-<meta name="twitter:description" content="What is ng-template?ng-template creates templates that are not displayed by default.It is displayed only when specified when used with a control structure such as if.">
-<meta name="twitter:image" content="https://user-images.githubusercontent.com/13145406/63014034-b11e9000-bee1-11e9-9aec-b64c4104dc03.png">
+<meta name="twitter:title" content="Create dotnet console app with terminal">
+<meta name="twitter:description" content="🚗 1. Create a project directory and move into it12mkdir HogeConsoleAppcd HogeConsoleApp">
+<meta name="twitter:image" content="https://user-images.githubusercontent.com/13145406/127850680-57fe4712-33c3-4795-887b-6febeef92630.png">
   
   
     <link rel="icon" href="/images/favicon.ico">
@@ -100,7 +101,7 @@ ga('send', 'pageview');
 </header>
 
       <div class="outer">
-        <section id="main"><article id="post-Angular-ng-template-basic" class="article article-type-post" itemscope
+        <section id="main"><article id="post-Create-dotnet-console-app-with-terminal" class="article article-type-post" itemscope
   itemprop="blogPost">
   <div class="article-meta">
   </div>
@@ -111,12 +112,12 @@ ga('send', 'pageview');
       
   
     <h1 class="article-title" itemprop="name">
-      Angular - ng-template basic
+      Create dotnet console app with terminal
     </h1>
   
 
       <span class="article-date">
-  <time datetime="2019-08-14T10:15:38.000Z" itemprop="datePublished">🕒 2019-08-14</time>
+  <time datetime="2021-07-30T10:32:38.000Z" itemprop="datePublished">🕒 2021-07-30</time>
 </span>
       
       
@@ -124,18 +125,19 @@ ga('send', 'pageview');
     
     <div class="article-entry" itemprop="articleBody">
       
-      <h2 id="What-is-ng-template"><a href="#What-is-ng-template" class="headerlink" title="What is ng-template?"></a>What is <code>ng-template</code>?</h2><p><code>ng-template</code> creates templates that are not displayed by default.<br>It is displayed only when specified when used with a control structure such as if.</p>
+      <h3 id="🚗-1-Create-a-project-directory-and-move-into-it"><a href="#🚗-1-Create-a-project-directory-and-move-into-it" class="headerlink" title="🚗 1. Create a project directory and move into it"></a>🚗 1. Create a project directory and move into it</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mkdir HogeConsoleApp</span><br><span class="line">cd HogeConsoleApp</span><br></pre></td></tr></table></figure>
 <a id="more"></a>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">// app.component.html - ver.1</span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">ng-container</span></span></span><br><span class="line"><span class="tag">    *<span class="attr">ngIf</span>=<span class="string">"hoe; else bar"</span>&gt;</span></span><br><span class="line">    This will be shown if <span class="tag">&lt;<span class="name">b</span>&gt;</span>true<span class="tag">&lt;/<span class="name">b</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">ng-container</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">ng-template</span> #<span class="attr">bar</span>&gt;</span></span><br><span class="line">    #bar - This will be shown if <span class="tag">&lt;<span class="name">b</span>&gt;</span>false<span class="tag">&lt;/<span class="name">b</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">ng-template</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">// app.component.html - ver.2</span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">ng-container</span></span></span><br><span class="line"><span class="tag">    *<span class="attr">ngIf</span>=<span class="string">"hoe; then foo; else bar"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">ng-container</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">ng-template</span> #<span class="attr">foo</span>&gt;</span></span><br><span class="line">    #foo - This will be shown if <span class="tag">&lt;<span class="name">b</span>&gt;</span>true<span class="tag">&lt;/<span class="name">b</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">ng-template</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">ng-template</span> #<span class="attr">bar</span>&gt;</span></span><br><span class="line">    #bar - This will be shown if <span class="tag">&lt;<span class="name">b</span>&gt;</span>false<span class="tag">&lt;/<span class="name">b</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">ng-template</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<h3 id="Demo"><a href="#Demo" class="headerlink" title="Demo"></a><a href="https://stackblitz.com/edit/angular-zda1ck" target="_blank">Demo</a></h3><p><img src="https://user-images.githubusercontent.com/13145406/63014034-b11e9000-bee1-11e9-9aec-b64c4104dc03.png" alt="ng-template"></p>
+<h3 id="🚗-2-Create-a-console-app"><a href="#🚗-2-Create-a-console-app" class="headerlink" title="🚗 2. Create a console app"></a>🚗 2. Create a console app</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dotnet new console</span><br></pre></td></tr></table></figure>
+<h3 id="🚗-3-Run-the-consle-app"><a href="#🚗-3-Run-the-consle-app" class="headerlink" title="🚗 3. Run the consle app"></a>🚗 3. Run the consle app</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dotnet run</span><br></pre></td></tr></table></figure>
+<p><img src="https://user-images.githubusercontent.com/13145406/127850680-57fe4712-33c3-4795-887b-6febeef92630.png" alt="project"></p>
+<p><img src="https://user-images.githubusercontent.com/13145406/127850353-748bd6b4-1458-49f8-97df-51621ee23ac8.png" alt="result"></p>
 
       
     </div>
     <footer class="article-footer">
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Angular/">Angular</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Net/">.Net</a></li></ul>
 
     </footer>
   </div>
@@ -143,19 +145,19 @@ ga('send', 'pageview');
   
 <nav id="article-nav">
   
-    <a href="/2019/09/13/Order-of-css-property-with-stylelint-config-idiomatic-css/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2021/07/31/How-to-execute-multiple-functions-in-ternary-operator/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          Order of css property with stylelint-config-idiomatic-css
+          How to execute multiple functions in ternary operator
         
       </div>
     </a>
   
   
-    <a href="/2019/08/14/Angular-ng-content-basic/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2021/07/13/react-testing-library-Change-the-size-of-debug-s-output/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Angular - ng-content basic</div>
+      <div class="article-nav-title">react-testing-library: Change the size of debug&#39;s output</div>
     </a>
   
 </nav>

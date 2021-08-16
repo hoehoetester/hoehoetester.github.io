@@ -18,22 +18,20 @@ ga('send', 'pageview');
 
 
   
-  <title>Angular - ng-template basic | Hoehoe blog</title>
+  <title>How to execute multiple functions in ternary operator | Hoehoe blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="What is ng-template?ng-template creates templates that are not displayed by default.It is displayed only when specified when used with a control structure such as if.">
-<meta name="keywords" content="Angular">
+  <meta name="description" content="🦄 Option 1:  Create each function and use comma">
+<meta name="keywords" content="Javascript">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Angular - ng-template basic">
-<meta property="og:url" content="http://yoursite.com/2019/08/14/Angular-ng-template-basic/index.html">
+<meta property="og:title" content="How to execute multiple functions in ternary operator">
+<meta property="og:url" content="http://yoursite.com/2021/07/31/How-to-execute-multiple-functions-in-ternary-operator/index.html">
 <meta property="og:site_name" content="Hoehoe blog">
-<meta property="og:description" content="What is ng-template?ng-template creates templates that are not displayed by default.It is displayed only when specified when used with a control structure such as if.">
+<meta property="og:description" content="🦄 Option 1:  Create each function and use comma">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="https://user-images.githubusercontent.com/13145406/63014034-b11e9000-bee1-11e9-9aec-b64c4104dc03.png">
-<meta property="og:updated_time" content="2021-08-16T09:55:42.846Z">
+<meta property="og:updated_time" content="2021-08-16T10:34:12.313Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Angular - ng-template basic">
-<meta name="twitter:description" content="What is ng-template?ng-template creates templates that are not displayed by default.It is displayed only when specified when used with a control structure such as if.">
-<meta name="twitter:image" content="https://user-images.githubusercontent.com/13145406/63014034-b11e9000-bee1-11e9-9aec-b64c4104dc03.png">
+<meta name="twitter:title" content="How to execute multiple functions in ternary operator">
+<meta name="twitter:description" content="🦄 Option 1:  Create each function and use comma">
   
   
     <link rel="icon" href="/images/favicon.ico">
@@ -100,7 +98,7 @@ ga('send', 'pageview');
 </header>
 
       <div class="outer">
-        <section id="main"><article id="post-Angular-ng-template-basic" class="article article-type-post" itemscope
+        <section id="main"><article id="post-How-to-execute-multiple-functions-in-ternary-operator" class="article article-type-post" itemscope
   itemprop="blogPost">
   <div class="article-meta">
   </div>
@@ -111,12 +109,12 @@ ga('send', 'pageview');
       
   
     <h1 class="article-title" itemprop="name">
-      Angular - ng-template basic
+      How to execute multiple functions in ternary operator
     </h1>
   
 
       <span class="article-date">
-  <time datetime="2019-08-14T10:15:38.000Z" itemprop="datePublished">🕒 2019-08-14</time>
+  <time datetime="2021-07-31T11:19:29.000Z" itemprop="datePublished">🕒 2021-07-31</time>
 </span>
       
       
@@ -124,18 +122,15 @@ ga('send', 'pageview');
     
     <div class="article-entry" itemprop="articleBody">
       
-      <h2 id="What-is-ng-template"><a href="#What-is-ng-template" class="headerlink" title="What is ng-template?"></a>What is <code>ng-template</code>?</h2><p><code>ng-template</code> creates templates that are not displayed by default.<br>It is displayed only when specified when used with a control structure such as if.</p>
-<a id="more"></a>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">// app.component.html - ver.1</span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">ng-container</span></span></span><br><span class="line"><span class="tag">    *<span class="attr">ngIf</span>=<span class="string">"hoe; else bar"</span>&gt;</span></span><br><span class="line">    This will be shown if <span class="tag">&lt;<span class="name">b</span>&gt;</span>true<span class="tag">&lt;/<span class="name">b</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">ng-container</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">ng-template</span> #<span class="attr">bar</span>&gt;</span></span><br><span class="line">    #bar - This will be shown if <span class="tag">&lt;<span class="name">b</span>&gt;</span>false<span class="tag">&lt;/<span class="name">b</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">ng-template</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">// app.component.html - ver.2</span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">ng-container</span></span></span><br><span class="line"><span class="tag">    *<span class="attr">ngIf</span>=<span class="string">"hoe; then foo; else bar"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">ng-container</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">ng-template</span> #<span class="attr">foo</span>&gt;</span></span><br><span class="line">    #foo - This will be shown if <span class="tag">&lt;<span class="name">b</span>&gt;</span>true<span class="tag">&lt;/<span class="name">b</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">ng-template</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">ng-template</span> #<span class="attr">bar</span>&gt;</span></span><br><span class="line">    #bar - This will be shown if <span class="tag">&lt;<span class="name">b</span>&gt;</span>false<span class="tag">&lt;/<span class="name">b</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">ng-template</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<h3 id="Demo"><a href="#Demo" class="headerlink" title="Demo"></a><a href="https://stackblitz.com/edit/angular-zda1ck" target="_blank">Demo</a></h3><p><img src="https://user-images.githubusercontent.com/13145406/63014034-b11e9000-bee1-11e9-9aec-b64c4104dc03.png" alt="ng-template"></p>
-
+      <h3 id="🦄-Option-1-Create-each-function-and-use-comma"><a href="#🦄-Option-1-Create-each-function-and-use-comma" class="headerlink" title="🦄 Option 1:  Create each function and use comma"></a>🦄 Option 1:  Create each function and use comma</h3><a id="more"></a>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> flag1 = <span class="literal">true</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> func1 = <span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">const</span> funcOne = <span class="function"><span class="params">()</span> =&gt;</span> <span class="built_in">console</span>.log(<span class="string">'ONE'</span>);</span><br><span class="line">  <span class="keyword">const</span> funcTwo = <span class="function"><span class="params">()</span> =&gt;</span> <span class="built_in">console</span>.log(<span class="string">'TWO'</span>);</span><br><span class="line">  <span class="keyword">const</span> funcThree = <span class="function"><span class="params">()</span> =&gt;</span> <span class="built_in">console</span>.log(<span class="string">'THREE'</span>);</span><br><span class="line"></span><br><span class="line">  flag1 ? (funcOne(), funcTwo()) : funcThree();</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">func1(); <span class="comment">// ONE TWO</span></span><br></pre></td></tr></table></figure>
+<h3 id="🦄-Option-2-Use-Immediately-Invoked-Function-Expression-IIFE"><a href="#🦄-Option-2-Use-Immediately-Invoked-Function-Expression-IIFE" class="headerlink" title="🦄 Option 2: Use Immediately-Invoked Function Expression (IIFE)"></a>🦄 Option 2: Use Immediately-Invoked Function Expression (IIFE)</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> flag2 = <span class="literal">true</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> func2 = <span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">  flag2</span><br><span class="line">    ? <span class="function">(<span class="params">(</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">'ONE'</span>);</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">'TWO'</span>);</span><br><span class="line">      &#125;)()</span><br><span class="line">    : <span class="built_in">console</span>.log(<span class="string">'THREE'</span>);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">func2(); <span class="comment">// ONE TWO</span></span><br></pre></td></tr></table></figure>
       
     </div>
     <footer class="article-footer">
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Angular/">Angular</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Javascript/">Javascript</a></li></ul>
 
     </footer>
   </div>
@@ -143,19 +138,19 @@ ga('send', 'pageview');
   
 <nav id="article-nav">
   
-    <a href="/2019/09/13/Order-of-css-property-with-stylelint-config-idiomatic-css/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2021/08/03/Typescript-note-Generics/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          Order of css property with stylelint-config-idiomatic-css
+          Typescript note - Generics
         
       </div>
     </a>
   
   
-    <a href="/2019/08/14/Angular-ng-content-basic/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2021/07/30/Create-dotnet-console-app-with-terminal/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Angular - ng-content basic</div>
+      <div class="article-nav-title">Create dotnet console app with terminal</div>
     </a>
   
 </nav>
