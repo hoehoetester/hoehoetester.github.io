@@ -18,20 +18,22 @@ ga('send', 'pageview');
 
 
   
-  <title>Terminal command and Create aliases | Hoehoe blog</title>
+  <title>React with json-server | Hoehoe blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="⛳ Terminal Command pwd: Print Working Directory cd ~: Move to home directory cd: Move to home directory command + k: Clear nano &amp;lt;file_name&amp;gt;: Edit with nano rm -r &amp;lt;directory_name&amp;gt;: -r is re">
-<meta name="keywords" content="Mac,Terminal">
+  <meta name="description" content="Agenda Create react app Install json-server Create database file Add npm scripts Call the api from component via useEffect Run">
+<meta name="keywords" content="React,json-server">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Terminal command and Create aliases">
-<meta property="og:url" content="http://yoursite.com/2020/05/31/Terminal-command-and-Create-aliases/index.html">
+<meta property="og:title" content="React with json-server">
+<meta property="og:url" content="http://yoursite.com/2021/09/26/React-with-json-server/index.html">
 <meta property="og:site_name" content="Hoehoe blog">
-<meta property="og:description" content="⛳ Terminal Command pwd: Print Working Directory cd ~: Move to home directory cd: Move to home directory command + k: Clear nano &amp;lt;file_name&amp;gt;: Edit with nano rm -r &amp;lt;directory_name&amp;gt;: -r is re">
+<meta property="og:description" content="Agenda Create react app Install json-server Create database file Add npm scripts Call the api from component via useEffect Run">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2021-08-16T09:55:42.867Z">
+<meta property="og:image" content="https://user-images.githubusercontent.com/13145406/134805048-a47bcd08-1811-4512-87b5-155724e71870.png">
+<meta property="og:updated_time" content="2021-09-26T11:05:04.495Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Terminal command and Create aliases">
-<meta name="twitter:description" content="⛳ Terminal Command pwd: Print Working Directory cd ~: Move to home directory cd: Move to home directory command + k: Clear nano &amp;lt;file_name&amp;gt;: Edit with nano rm -r &amp;lt;directory_name&amp;gt;: -r is re">
+<meta name="twitter:title" content="React with json-server">
+<meta name="twitter:description" content="Agenda Create react app Install json-server Create database file Add npm scripts Call the api from component via useEffect Run">
+<meta name="twitter:image" content="https://user-images.githubusercontent.com/13145406/134805048-a47bcd08-1811-4512-87b5-155724e71870.png">
   
   
     <link rel="icon" href="/images/favicon.ico">
@@ -98,7 +100,7 @@ ga('send', 'pageview');
 </header>
 
       <div class="outer">
-        <section id="main"><article id="post-Terminal-command-and-Create-aliases" class="article article-type-post" itemscope
+        <section id="main"><article id="post-React-with-json-server" class="article article-type-post" itemscope
   itemprop="blogPost">
   <div class="article-meta">
   </div>
@@ -109,12 +111,12 @@ ga('send', 'pageview');
       
   
     <h1 class="article-title" itemprop="name">
-      Terminal command and Create aliases
+      React with json-server
     </h1>
   
 
       <span class="article-date">
-  <time datetime="2020-05-31T11:53:44.000Z" itemprop="datePublished">🕒 2020-05-31</time>
+  <time datetime="2021-09-26T10:28:50.000Z" itemprop="datePublished">🕒 2021-09-26</time>
 </span>
       
       
@@ -122,41 +124,30 @@ ga('send', 'pageview');
     
     <div class="article-entry" itemprop="articleBody">
       
-      <h3 id="⛳-Terminal-Command"><a href="#⛳-Terminal-Command" class="headerlink" title="⛳ Terminal Command"></a>⛳ Terminal Command</h3><ul>
-<li><code>pwd</code>: Print Working Directory</li>
-<li><code>cd ~</code>: Move to home directory</li>
-<li><code>cd</code>: Move to home directory</li>
-<li><code>command + k</code>: Clear</li>
-<li><code>nano &lt;file_name&gt;</code>: Edit with nano</li>
-<li><code>rm -r &lt;directory_name&gt;</code>: <code>-r</code> is recursive option</li>
-</ul>
+      <h3 id="Agenda"><a href="#Agenda" class="headerlink" title="Agenda"></a>Agenda</h3><ol>
+<li><a href="#1">Create react app</a></li>
+<li><a href="#2">Install <code>json-server</code></a></li>
+<li><a href="#3">Create database file</a></li>
+<li><a href="#4">Add npm scripts</a></li>
+<li><a href="#5">Call the api from component via <code>useEffect</code></a></li>
+<li><a href="#6">Run</a></li>
+</ol>
 <a id="more"></a>
-<h3 id="⛳-Create-Aliases-commands"><a href="#⛳-Create-Aliases-commands" class="headerlink" title="⛳ Create Aliases commands"></a>⛳ Create Aliases commands</h3><ol>
-<li><code>cd ~</code></li>
-<li><code>sudo nano .bash_profile</code></li>
-<li><code>alias ys=‘yarn start’</code> —&gt; Save and Exit</li>
-<li>Restart terminal</li>
-<li><code>ys</code> —&gt; Happy💥</li>
-</ol>
-<h4 id="⛳-Show-all-aliases-list"><a href="#⛳-Show-all-aliases-list" class="headerlink" title="⛳ Show all aliases list"></a>⛳ Show all aliases list</h4><ol>
-<li><code>cd</code></li>
-<li><code>alias</code></li>
-</ol>
-<h3 id="⛳-Refereces"><a href="#⛳-Refereces" class="headerlink" title="⛳ Refereces"></a>⛳ Refereces</h3><p><a href="https://www.youtube.com/watch?v=0liXeoADU6A" target="_blank" rel="noopener">https://www.youtube.com/watch?v=0liXeoADU6A</a></p>
-<h3 id="🤔-Can’t-open-VS-Code-form-Terminal"><a href="#🤔-Can’t-open-VS-Code-form-Terminal" class="headerlink" title="🤔 Can’t open VS Code form Terminal !?"></a>🤔 Can’t open VS Code form Terminal !?</h3><p>If you got this error: <code>-bash: code: command not found</code></p>
-<ol>
-<li>Launch VS Code</li>
-<li><code>Cmd + Shift + P</code></li>
-<li>Type <code>Shell</code> —&gt; <code>Shell Command: Install &#39;code&#39; command in PATH command</code></li>
-<li>Restart terminal</li>
-</ol>
+<h3 id="1">1. Create react app</h3><br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npx create-react-app react-with-json-server</span><br></pre></td></tr></table></figure><br><br><h3 id="2">1. Install <code>json-server</code></h3><br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i json-server</span><br></pre></td></tr></table></figure><br><br><h3 id="3">3. Create database file</h3>
+
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir data &amp; touch data/db.json</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// data/db.json</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="string">"users"</span>: [</span><br><span class="line">    &#123;</span><br><span class="line">      <span class="string">"id"</span>: <span class="string">"1"</span>,</span><br><span class="line">      <span class="string">"name"</span>: <span class="string">"Ichi"</span></span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">      <span class="string">"id"</span>: <span class="string">"2"</span>,</span><br><span class="line">      <span class="string">"name"</span>: <span class="string">"Ni"</span></span><br><span class="line">    &#125;</span><br><span class="line">  ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p></p><h3 id="4">4. Add npm scripts</h3><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&quot;server&quot;: &quot;json-server --watch data/db.json --port 8000&quot;,</span><br><span class="line">&quot;dev&quot;: &quot;npm run start &amp; npm run server&quot;</span><br></pre></td></tr></table></figure><p></p>
+<p></p><h3 id="5">5. Call the api from component via <code>useEffect</code></h3><br><figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; useEffect, useState &#125; <span class="keyword">from</span> <span class="string">"react"</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> App = <span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">const</span> [users, setUsers] = useState(<span class="literal">null</span>);</span><br><span class="line"></span><br><span class="line">  useEffect(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">const</span> url = <span class="string">"http://localhost:8000/users"</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">const</span> fetchData = <span class="keyword">async</span> () =&gt; &#123;</span><br><span class="line">      <span class="keyword">const</span> response = <span class="keyword">await</span> fetch(url);</span><br><span class="line">      <span class="keyword">const</span> json = <span class="keyword">await</span> response.json();</span><br><span class="line">      setUsers(json);</span><br><span class="line">    &#125;;</span><br><span class="line"></span><br><span class="line">    fetchData();</span><br><span class="line">  &#125;, []);</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    &lt;div&gt;</span><br><span class="line">      &lt;p&gt;&#123;<span class="built_in">JSON</span>.stringify(users)&#125;&lt;<span class="regexp">/p&gt;</span></span><br><span class="line"><span class="regexp">    &lt;/</span>div&gt;</span><br><span class="line">  );</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> App;</span><br></pre></td></tr></table></figure><p></p>
+<p></p><h3 id="6">6. Run</h3><br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm run development</span><br></pre></td></tr></table></figure><p></p>
+<p><img src="https://user-images.githubusercontent.com/13145406/134805048-a47bcd08-1811-4512-87b5-155724e71870.png" alt="Result"></p>
 
       
     </div>
     <footer class="article-footer">
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Mac/">Mac</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Terminal/">Terminal</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/React/">React</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/json-server/">json-server</a></li></ul>
 
     </footer>
   </div>
@@ -164,19 +155,10 @@ ga('send', 'pageview');
   
 <nav id="article-nav">
   
-    <a href="/2020/06/03/Remove-global-npm-package/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          Remove global npm package
-        
-      </div>
-    </a>
   
-  
-    <a href="/2020/05/18/Getting-started-with-Cypress-E2E-Testing-Framework/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2021/08/16/OOPS-I-want-to-undo-the-last-push-on-Github/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Getting started with Cypress - E2E Testing Framework</div>
+      <div class="article-nav-title">OOPS! I want to undo the last push on Github</div>
     </a>
   
 </nav>
